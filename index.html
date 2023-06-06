@@ -17,7 +17,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
+    <script src="script.js" defer></script>
     <title>Raízes do Mangue</title>
   </head>
   <body>
@@ -121,6 +121,7 @@
                 <span class="btn btn-success spaceInput" id="Result"
                   >Logado</span
                 >
+                <p id="Message1" class="Message">x</p>
               </form>
               <div class="modal-footer">
                 <button
@@ -156,24 +157,24 @@
           <div class="container" id="RGNL">
             <form id="cad-usuario-form">
               <div class="form-group">
-                <label>E-mail</label>
+                <label>Username</label>
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
                   id="UsernameRG"
-                  placeholder="Digite um e-mail"
+                  placeholder="Digite um Username"
                 />
               </div>
               <div class="form-group">
-                <label>Senha</label>
+                <label>Password</label>
                 <input
                   type="password"
                   class="form-control"
                   id="PasswordRG"
-                  placeholder="Digite uma senha"
+                  placeholder="Digite uma Password"
                 />
               </div>
-              <p id="Message"></p>
+              <p id="Message2" class="Message"></p>
               <input
                 type="button"
                 value="Cadastrar"

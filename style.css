@@ -181,13 +181,24 @@ p {
   margin-bottom: 8px;
 }
 
-#Message{
+#Message {
   margin-top: 10px;
   background-color: #228b22;
   border-radius: 4px;
   text-align: center;
 }
+#ContainerLT {
+  cursor: pointer;
+}
 
+.Message {
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 5px;
+}
+.form-group {
+  margin-top: 10px;
+}
 /* ANIMAÇÕES */
 @keyframes fromLeft {
   from {
