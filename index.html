@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/IconMestick.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>Raízes do Mangue</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <div class="d-flex">
+            <img class="navbar-brand Avatar" src="img/hermit-crab.png" />
+            <p class="mR10px rName">Raízes do Mangue</p>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <button
+                  class="nav-link dropdown-toggle buttonReset"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Topicos abordados
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item bordeRDPT" href="#Sobre"
+                    >Sobre o nosso projeto</a
+                  >
+              
+                  <a class="dropdown-item" href="#Projeto"
+                    >Projeto Parque das Graças</a
+                  >
+               
+                  <a class="dropdown-item bordeRDPB" href="#">Problema Ambiental</a>
+                </div>
+              </li>
+            </ul>
+            <div class="d-flex buttonC">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#logModal"
+              >
+                LOGIN
+              </button>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+              >
+                REGISTER
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="modal fade" id="logModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="labelLogIn">Login</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="LogIn">
+              <form id="loginForm">
+                <label for="recipient-name" class="col-form-label"
+                  >Login:
+                </label>
+                <input
+                  type="text"
+                  class="form-control spaceInput Username"
+                  id="Username"
+                  placeholder="Username"
+                />
+                <input
+                  type="password"
+                  class="form-control spaceInput Password"
+                  placeholder="Password"
+                  id="Password"
+                />
+                <input
+                  type="button"
+                  class="btn btn-secondary spaceInput"
+                  value="Enviar"
+                  id="Enviar"
+                />
+                <span class="btn btn-success spaceInput" id="Result"
+                  >Logado</span
+                >
+              </form>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Registro</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="container" id="RGNL">
+            <form id="cad-usuario-form">
+              <div class="form-group">
+                <label>E-mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="UsernameRG"
+                  placeholder="Digite um e-mail"
+                />
+              </div>
+              <div class="form-group">
+                <label>Senha</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="PasswordRG"
+                  placeholder="Digite uma senha"
+                />
+              </div>
+              <input
+                type="button"
+                value="Cadastrar"
+                class="btn btn-secondary"
+                id="btnRGNL"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="Container">
+        <div class="card" id="Sobre">
+          <div class="card-body">
+            <h1 class="card-title">SOBRE O NOSSO PROJETO</h1>
+            <p id="INER" class="card-text">
+              O propósito primordial do presente projeto reside no estímulo ao
+              debate cívico acerca da devastação dos manguezais e das suas
+              repercussões imediatas e futuras na sociedade. A intenção
+              subjacente é abordar a empreitada do Parque das Graças, o qual tem
+              por desígnio aproveitar o leito fluvial e o ecossistema manguezal
+              como alicerce para a edificação de um dos trinta parques
+              contemplados no esquema urbanístico do Recife. A flagrante
+              destruição dos manguezais é testemunhada cotidianamente, sendo
+              hábil e abundantemente documentada por meio de fotografias que
+              patenteiam as alterações territoriais em curso e suas nefastas
+              consequências. Comparativos estudos amparam incontestavelmente a
+              estreita conexão entre essa temerária devastação, os fenômenos
+              naturais catastróficos e as vicissitudes climáticas, as quais
+              acarretam severos impactos na coletividade e comprometem
+              sobremaneira a fauna e a flora dos manguezais. Em derradeira
+              análise, delineamos um plano para a erradicação desse pernicioso
+              cenário, o qual engloba a criação de um sítio eletrônico
+              informativo, o desenvolvimento de projetos, a fixação de metas e a
+              implementação de ferramentas que visam à conscientização e à
+              educação da população.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+          <img
+            src="https://imagens.ne10.uol.com.br/veiculos/_midias/jpg/2021/04/12/597x330/1_tvjc0206-17336043.jpg"
+            class="card-img-bottom w-50 d-flex"
+            alt="imagem sobre"
+          />
+        </div>
+        <div class="card" id="Projeto">
+          <div class="card-body">
+            <h1 class="card-title">PROJETO PARQUE DAS GRAÇAS</h1>
+            <p class="card-text">
+              O projeto Parque das Graças, trata-se de um mútuo acordo entre as
+              diversas partes interessadas, devido ao diálogo entre o poder
+              público, os moradores da região das graças, a universidade
+              Maurício de Nassau, projeto que até então seria de uma via de
+              quatro faixas para veículos que aproveitaria o leito do rio para
+              ligar duas vias de principais do recife, sendo essas Rua Amélia e
+              a Rua Joaquim Nabuco, englobando os bairros: Torre, Graças e
+              Derby.
+            </p>
+            <p>
+              Contudo, após anos de negociações o projeto passou por diversas
+              alterações até chegar ao que é hoje, no projeto atual, soluções
+              urbanísticas possibilitam espaços de aproximação ao rio, através
+              de passarelas que percorrem as margens e os mangues, e píeres que
+              permitem o acesso de pequenas embarcações. As ruas que se conectam
+              ao rio serão qualificadas para transformar a experiência de andar
+              pelo bairro, criando conexões entre espaços verdes e públicos, que
+              seguem as diretrizes do Parque Capibaribe, de recuperação
+              ambiental, promoção da mobilidade não motorizada, integração
+              sócio-espacial e ativação dos espaços públicos.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+          <img
+            src="img/ProjetoPQG/Modulo-Gracas.png"
+            class="card-img-bottom w-50 d-flex"
+            alt="imagem sobre"
+          />
+        </div>
+        <section class="textCard">
+          <div class="textContainer" id="Problema">
+            <h1 class="text-center">Problema Ambiental</h1>
+            <p class="text">
+              Conforme observamos a tratativa do projeto Parque das Graças, a
+              princípio trata-se de uma requalificação urbanística para a cidade
+              do Recife, onde o Parque das Graças encontra-se sendo abrangido
+              por esse projeto urbanístico que conta com mais 30 parques
+              fluviais, esses todos espalhados pela região metropolitana do
+              Recife, ao qual utilizam-se dos leitos dos rios e seus mangues,
+              contudo é preciso observar os diversos problemas ambientais e
+              possíveis impactos em nosso leito de rio, fauna, flora e solo das
+              regiões afetadas.
+            </p>
+            <p class="text">
+              É notório que o mangue assim como toda a natureza ao seu redor, é
+              necessário para o equilíbrio natural tanto do local quanto de
+              diversos outros, pois, como sabemos o mangue é o berço de toda
+              vida marinha, é no mangue que as mais diversas espécies se
+              reproduzem e se alimentam, criando assim um ciclo. E não seria tão
+              somente a vida marinha, que dependeria do mangue, pois, existem
+              muitas outras espécies de animais no Manguezal, como crustáceos,
+              aves migratórias e aves do próprio mangue, peixes, répteis,
+              mamíferos. Como podemos citar dentre essas espécies, garças,
+              lontras, capivaras, peixes dos mais diversos, caranguejos,
+              camarões, jacarés, entre outros mais, até mesmo animais que estão
+              em alto mar, dependem do manguezal, para se reproduzir em
+              segurança ou se alimentar, pois, suas presas se reproduzem e se
+              abrigam no manguezal, devido a sua riqueza em alimentos e as
+              raízes das arvores serem tão extensas. E não somente os animais
+              necessitam do mangue, o ser humano depende de toda essa vida para
+              sobreviver e para que se tenha um futuro, ao qual possamos viver.
+            </p>
+          </div>
+        </section>
+        <section class="textCard">
+          <div class="textContainer" id="Caracteristicas">
+            <h1 class="text-center">Características do manguezal</h1>
+            <p class="text">
+              Os manguezais são ecossistemas típicos de regiões tropicais
+              litorâneas, caracterizando ambientes aquáticos nos quais mediam o
+              contato entre os cursos hídricos fluviais (água doce) com o mar
+              (água salgada). O solo desses locais é geralmente lamacento,
+              semelhante à configuração pantanosa, rico em matéria orgânica,
+              servindo de substrato para o desenvolvimento de vegetações
+              específicas, tolerantes à salinidade e possuindo órgãos
+              vegetativos com adaptação pouco comum, como é observado por meio
+              das raízes respiratórias responsáveis pela captação de oxigênio
+              (pneumatóforos) e formas que permitem a fixação do vegetal.
+            </p>
+            <p class="text">
+              Entre os ecossistemas florestais, os mangues são reconhecidos por
+              sua capacidade de absorver a grande quantidade de gás carbônico
+              presente na atmosfera. O “sequestro de carbono”, como este
+              fenômeno natural é conhecido, consiste na transferência de carbono
+              da atmosfera para o solo e a água por meio das árvores do mangue.
+              Além da importância nos processos bioquímicos naturais, o fenômeno
+              ajuda a combater o aquecimento global e, consequentemente, as
+              alterações climáticas em todo o mundo. Desse modo, entendemos que
+              as florestas de mangues têm influência em todos os processos
+              ambientais que envolvem as mudanças climáticas, a exemplo do
+              degelo das calotas polares e o branqueamento dos corais.
+            </p>
+          </div>
+        </section>
+        <section class="textCard">
+          <div class="textContainer" id="Protecao">
+            <h1 class="text-center">Proteção de regiões costeiras</h1>
+            <p class="text text-break">
+              A vegetação do mangue, principalmente seu sistema de raízes, é
+              capaz de reduzir o impacto da água do mar nas regiões costeiras,
+              protegendo cidades litorâneas contra os efeitos da erosão das
+              marés, tempestades, aumento do nível do mar, e até mesmo tsunamis.
+              De acordo com relatórios ambientais internacionais, a presença de
+              manguezais em algumas cidades costeiras foi essencial na redução
+              do impacto de tsunamis ao longo da história, como o tsunami do
+              Oceano Índico, em 2004. Apesar do Brasil nunca ter sido atingido
+              por este fenômeno natural – graças à sua localização geológica
+              privilegiada – outros fenômenos ambientais, como enchentes e
+              alagamentos – causados pela elevação das marés – podem causar
+              grandes estragos ao litoral do país.
+            </p>
+          </div>
+        </section>
+        <section class="textCard">
+          <div class="textContainer" id="Previne">
+            <h1 class="text-center">Previne o assoreamento</h1>
+            <p class="text">
+              O assoreamento de cursos d'água consiste no acúmulo de sedimentos
+              pelo depósito de solo e outros tipos de detritos no fundo de rios,
+              baías e lagos, sendo responsável por provocar a redução do volume
+              de água de habitats naturais. O assoreamento também torna a água
+              turva, dificulta a entrada de luz e compromete severamente o
+              processo de fotossíntese de espécies vegetais. O fenômeno ainda
+              aumenta o risco de enchentes, visto que a redução do volume dos
+              rios facilita o transbordamento da água, comprometendo a
+              circulação de embarcações. Apesar de natural, o processo é
+              intensificado pela ação humana com o desmatamento de florestas de
+              mangue.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 bordeFooter"
+      >
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </section>
+      <section>
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Raízes do Mangue
+              </h6>
+              <p class="text-break">
+                Enquanto o homem continuar a ser destruidor impiedoso dos seres
+                animados dos planos inferiores, não conhecerá a saúde nem a paz.
+                Enquanto os homens massacrarem os animais, eles se matarão uns
+                aos outros. Aquele que semeia a morte e o sofrimento não pode
+                colher a alegria e o amor.
+                <a
+                  href="https://www.citador.pt/frases/enquanto-o-homem-continuar-a-ser-o-destruidor-dos-pitagoras-16117"
+                  target="_blank"
+                  >Pitágoras</a
+                >
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">SOBRE O PROJETO</h6>
+              <p>
+                <a href="index4Q.html" class="text-reset">Quem somos nós</a>
+              </p>
+              <p>
+                <a href="index5M.html" class="text-reset"
+                  >Materiais Utilizados</a
+                >
+              </p>
+              <p>
+                <a href="index6E.html" class="text-reset">Entrevistas</a>
+              </p>
+              <p>
+                <a href="index7R.html" class="text-reset"
+                  >Referências bibliográficas</a
+                >
+              </p>
+              <p>
+                <a href="index8F.html" class="text-reset"
+                  >Funções dos desenvolvedores</a
+                >
+              </p>
+              <p>
+                <a href="index9L.html" class="text-reset">Lean Canvas</a>
+              </p>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Nossas redes socais</h6>
+              <p>
+                <a
+                  href="https://www.instagram.com/raizes_mangue/"
+                  class="text-reset"
+                  target="_blank"
+                  ><img
+                    src="/img/instagram.png"
+                    alt="Logo Instagram"
+                    class="_20px"
+                  />Instagram</a
+                >
+              </p>
+              <p>
+                <a
+                  href="https://www.youtube.com/@raizesdomangue5473/playlists"
+                  class="text-reset"
+                  target="_blank"
+                  ><img
+                    src="/img/youtube.png"
+                    alt="Logo YouTube"
+                    class="_20px"
+                  />YouTube</a
+                >
+              </p>
+              <p>
+                <a
+                  href="https://www.facebook.com/raizesdomangue"
+                  class="text-reset"
+                  target="_blank"
+                  ><img
+                    src="/img/facebook.png"
+                    alt="Logo Facebook"
+                    class="_20px"
+                  />Facebook</a
+                >
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contatos</h6>
+              <p><i class="fas fa-home me-3"></i> Brasil, Recife-PE.</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                raizesdomangue@gmail.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i>+55 81 98893-0428</p>
+              <p><i class="fas fa-print me-3"></i>+55 81 99734-9245</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="text-center p-4" style="background-color: #0000000d">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >Raízes do Mangue</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
