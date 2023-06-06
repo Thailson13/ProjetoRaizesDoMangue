@@ -16,10 +16,6 @@ body {
   margin: 5px;
 }
 
-.emphasis strong {
-  padding: 10px;
-}
-
 .Avatar {
   margin: 10px;
 }
@@ -183,6 +179,13 @@ footer {
 
 p {
   margin-bottom: 8px;
+}
+
+#Message{
+  margin-top: 10px;
+  background-color: #228b22;
+  border-radius: 4px;
+  text-align: center;
 }
 
 /* ANIMAÇÕES */
