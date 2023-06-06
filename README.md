@@ -1,5 +1,5 @@
 # Informações - Information 
-![preview](IMG/Readme.png)
+![preview](img/Readme.png)
 
 PT - Este projeto constitui uma extensão do trabalho que venho desenvolvendo durante minha trajetória acadêmica atualmente em curso, com o objetivo de obter minha graduação. Mantenho o firme compromisso de promover atualizações constantes, visando aprimorar e ampliar as funcionalidades já existentes.
 
