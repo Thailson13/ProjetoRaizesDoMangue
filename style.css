@@ -24,6 +24,23 @@ body {
   margin: 10px;
 }
 
+.buttonColor {
+  background: #3290d3;
+  border-radius: 8px;
+  color: white;
+  border: none;
+}
+.buttonColor:hover {
+  background: #2178b6;
+  color: white;
+  border: none;
+}
+.buttonColor:focus {
+  background: #2178b6;
+  color: white;
+  border: none;
+}
+
 ._20px {
   width: 20px;
   height: 20px;
@@ -84,8 +101,39 @@ body {
 }
 
 .dropdown-menu {
-  padding: 0px;
+  padding: 5px;
   background: #e3f2fd;
+  border: 1px solid #3290d3;
+  text-align: center;
+}
+
+.dropdown-menu.show {
+  margin: 0px;
+  margin-top: 5px;
+  padding: 0px;
+}
+
+.bRT {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.bRB {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.dropdown-item {
+  color: #3290d3;
+}
+
+.dropdown-item:hover {
+  background: #2178b6;
+  color: white;
+}
+
+.nav-link {
+  margin: 5px;
 }
 
 .bordeRDPT {
