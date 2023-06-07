@@ -1,108 +1,94 @@
-function user() {
-  const cadForm = document.getElementById("cad-usuario-form");
-  const btnRGNL = document.getElementById("btnRGNL");
-  const loginForm = document.getElementById("loginForm");
-  const Enviar = document.getElementById("Enviar");
-  const Message1 = document.getElementById("Message1");
-  const Message2 = document.getElementById("Message2");
+document.addEventListener("DOMContentLoaded", function () {
+  const loginForm = document.querySelector("#loginForm");
+  const Enviar = document.querySelector("#Enviar");
+  const Message1 = document.querySelector("#Message1");
+  const Message2 = document.querySelector("#Message2");
+  const cadForm = document.querySelector("#cad-usuario-form");
+  const btnRGNL = document.querySelector("#btnRGNL");
+  const usernameInput = document.querySelector("#Username");
+  const passwordInput = document.querySelector("#Password");
+  const enviarButton = document.querySelector("#Enviar");
+  const Result = document.querySelector("#Result");
   let Users = [];
 
-  function showMessage1(text, color) {
-    Message1.textContent = text;
-    Message1.style.display = "block";
-    Message1.style.backgroundColor = color;
-    Message1.style.color = "white";
+  function showMessage(element, text, color) {
+    element.textContent = text;
+    element.style.display = "block";
+    element.style.backgroundColor = color;
+    element.style.color = "white";
     setTimeout(function () {
-      Message1.style.display = "none";
+      element.style.display = "none";
     }, 1500);
   }
 
-  function showMessage2(text, color) {
-    Message2.textContent = text;
-    Message2.style.display = "block";
-    Message2.style.backgroundColor = color;
-    Message2.style.color = "white";
-    setTimeout(function () {
-      Message2.style.display = "none";
-    }, 1500);
+  function hideLoginForm() {
+    usernameInput.style.display = "none";
+    passwordInput.style.display = "none";
+    enviarButton.style.display = "none";
+    Result.style.display = "flex";
   }
 
   function login() {
-    Users = JSON.parse(localStorage.getItem("Users"));
-    const Username = document.getElementById("Username").value;
-    const Password = document.getElementById("Password").value;
+    const username = usernameInput.value;
+    const password = passwordInput.value;
 
-    if (Username === "" || Password === "") {
-      showMessage1("Incomplete parameters!", "red");
+    if (!username || !password) {
+      showMessage(Message1, "Parâmetros incompletos!", "red");
+      return;
+    }
+
+    Users = JSON.parse(localStorage.getItem("Users")) || [];
+
+    const user = Users.find(
+      (user) => user.UsernameRG === username && user.PasswordRG === password
+    );
+
+    if (user) {
+      hideLoginForm();
     } else {
-      if (!Users) {
-        Users = JSON.parse(localStorage.getItem("Users"));
-        showMessage1("Incorrect parameters!", "red");
-      } else {
-        let success = false;
-        for (let i = 0; i < Users.length; i++) {
-          if (
-            Username === Users[i].UsernameRG &&
-            Password === Users[i].PasswordRG
-          ) {
-            console.log("successful Login!");
-            const x = document.getElementById("Username");
-            const y = document.getElementById("Password");
-            const z = document.getElementById("Enviar");
-            x.style.display = "none";
-            y.style.display = "none";
-            z.style.display = "none";
-            const Result = document.getElementById("Result");
-            Result.style.display = "flex";
-            showMessage1("successful Login!", "#228b22");
-            success = true;
-            break;
-          }
-        }
-        if (!success) {
-          showMessage1("Wrong Username or Password!", "red");
-        }
-      }
+      showMessage(Message1, "Usuário ou senha incorretos!", "red");
     }
   }
 
   function cadastro() {
-    const UsernameRG = document.getElementById("UsernameRG").value;
-    const PasswordRG = document.getElementById("PasswordRG").value;
+    const usernameRG = document.getElementById("UsernameRG").value;
+    const passwordRG = document.getElementById("PasswordRG").value;
 
-    if (UsernameRG === "" || PasswordRG === "") {
-      showMessage2("Incomplete parameters!", "red");
-    } else {
-      if (localStorage.hasOwnProperty("Users")) {
-        Users = JSON.parse(localStorage.getItem("Users"));
-        const userExists = Users.some((user) => user.UsernameRG === UsernameRG);
-        if (userExists) {
-          showMessage2("Usuário já cadastrado!", "red");
-          return false;
-        }
-      }
-
-      Users.push({ UsernameRG, PasswordRG });
-      localStorage.setItem("Users", JSON.stringify(Users));
-
-      showMessage2("Registro efetuado com sucesso!", "#228b22");
-      document.getElementById("UsernameRG").value = "";
-      document.getElementById("PasswordRG").value = "";
+    if (!usernameRG || !passwordRG) {
+      showMessage(Message2, "Parâmetros incompletos!", "red");
+      return;
     }
+
+    Users = JSON.parse(localStorage.getItem("Users")) || [];
+
+    const userExists = Users.some((user) => user.UsernameRG === usernameRG);
+
+    if (userExists) {
+      showMessage(Message2, "Usuário já cadastrado!", "red");
+      return false;
+    }
+
+    Users.push({ UsernameRG: usernameRG, PasswordRG: passwordRG });
+    localStorage.setItem("Users", JSON.stringify(Users));
+
+    showMessage(Message2, "Registro efetuado com sucesso!", "#228b22");
+    document.getElementById("UsernameRG").value = "";
+    document.getElementById("PasswordRG").value = "";
   }
-  Enviar.onclick = login;
-  loginForm.onkeypress = (event) => {
+
+  Enviar.addEventListener("click", login);
+  loginForm.addEventListener("keypress", function (event) {
     if (event.keyCode === 13) {
       login();
     }
-  };
+  });
 
-  btnRGNL.onclick = cadastro;
-  cadForm.onkeypress = (event) => {
+  btnRGNL.addEventListener("click", cadastro);
+  cadForm.addEventListener("keypress", function (event) {
     if (event.keyCode === 13) {
       cadastro();
     }
-  };
-}
+  });
 
-user();
+  console.log("O DOM foi completamente carregado!");
+});

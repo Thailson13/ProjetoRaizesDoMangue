@@ -1,15 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;800;900&family=Inter:wght@700&family=Roboto+Slab:wght@800&family=Roboto:wght@700&family=Russo+One&display=swap");
-
-/* RESET */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* BUILD */
 body {
-  background: #f4f8fc;
+  background: #F0F2F5;
 }
 
 .buttonC button {
@@ -26,11 +22,13 @@ body {
   color: white;
   border: none;
 }
+
 .buttonColor:hover {
   background: #2178b6;
   color: white;
   border: none;
 }
+
 .buttonColor:focus {
   background: #2178b6;
   color: white;
@@ -41,6 +39,15 @@ body {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+}
+
+.card-title{
+  font-size: 3vh;
+  font-family: 'Montserrat', sans-serif;
+}
+.card-text{
+  font-family: 'Crimson Text', serif;
+  font-size: 2.5vh;
 }
 
 .rName {
@@ -78,14 +85,13 @@ body {
   margin-top: 10px;
 }
 
-/* HEADER/NAVBAR */
 .container-fluid p {
   display: flex;
   margin: auto;
 }
 
 .navbar {
-  background: #e3f2fd;
+  background: #FFFFFF;
 }
 
 #btnRGNL {
@@ -98,7 +104,7 @@ body {
 
 .dropdown-menu {
   padding: 5px;
-  background: #e3f2fd;
+  background: #FFFFFF;
   border: 1px solid #3290d3;
   text-align: center;
 }
@@ -121,6 +127,18 @@ body {
 
 .dropdown-item {
   color: #3290d3;
+}
+
+.bRT{
+  border-bottom: solid 1px;
+}
+
+.bRB{
+  border-top: solid 1px;
+}
+
+.bRM{
+  border-bottom: solid 1px;
 }
 
 .dropdown-item:hover {
@@ -148,47 +166,87 @@ body {
   margin-left: 20px;
 }
 
-/* MAIN/SITE */
-.textCard {
-  padding: 10px;
-  color: black;
-  font-size: 16pt;
-  border-radius: 8px;
-}
 
 .border {
   border-left: solid 1px black;
-}
-
-.card {
-  margin: 10px;
 }
 
 .spaceInput {
   margin-top: 10px;
 }
 
-/* FOOTER */
+#Container .card {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.card {
+  width: 60vw;
+  text-align: justify;
+}
+
+.bdR8px{
+  border-radius: 8px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 30vh;
+}
+
 .text-reset {
   text-decoration: none;
 }
 
 footer {
-  background: #e3f2fd;
+  background: #FFFFFF;
+  color: #3A3B3C ;
 }
 
 p {
   margin-bottom: 8px;
 }
 
+.m-a{
+  margin: auto;
+}
+
+.btnD svg{
+  margin: auto;
+  margin-left: 3px;
+}
+
 #Message {
   margin-top: 10px;
+  margin: 0px;
   background-color: #228b22;
   border-radius: 4px;
   text-align: center;
 }
+
 #ContainerLT {
   cursor: pointer;
+}
+
+.d-m {
+  margin-top: 5px;
+}
+
+.d-m p {
+  margin: auto;
+  padding: 5px;
+}
+
+#Enviar {
+  margin: 0;
+  margin-right: 10px;
 }
 
 .Message {
@@ -196,14 +254,26 @@ p {
   text-align: center;
   margin-top: 5px;
 }
+
 .form-group {
   margin-top: 10px;
 }
-/* ANIMAÇÕES */
+
 @keyframes fromLeft {
   from {
     opacity: 0;
     transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fromRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
   }
 
   to {
@@ -236,12 +306,16 @@ p {
   }
 }
 
-#aTAB {
-  animation: fromBottom 0.3s backwards;
+.textAnimation{
+  animation: fromTop 0.4s backwards;
 }
 
-.textCard {
-  animation: fromLeft 0.4s backwards;
+nav{
+  animation: fromTop 0.4s backwards;
+}
+
+.dropdown-menu.show{
+  animation: fromRight 0.4s backwards;
 }
 
 @media (max-width: 991px) {
@@ -250,7 +324,6 @@ p {
   }
 }
 
-/* MEDIA QUERIES */
 @media (min-width: 280px) and (max-width: 281px) {
   #btnContainer {
     display: grid;
@@ -265,3 +338,4 @@ p {
     margin-left: 17px;
   }
 }
+
