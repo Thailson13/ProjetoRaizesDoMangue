@@ -55,6 +55,22 @@ body {
   padding-right: 10px;
 }
 
+.gitHub{
+  color: #181717;
+}
+
+.youtube{
+  color: #FF0000;
+}
+
+.facebook{
+  color: #1877F2;
+}
+
+.instagram{
+  color: #E4405F;
+}
+
 .buttonReset {
   background: none;
   border: none;
@@ -114,6 +130,7 @@ body {
   margin-top: 5px;
   padding: 0px;
 }
+
 
 .bRT {
   border-top-left-radius: 4px;
@@ -321,6 +338,7 @@ nav{
 @media (max-width: 991px) {
   .dropdown-menu {
     margin: 20px;
+    font-size: 3vw;
   }
 }
 
@@ -338,4 +356,3 @@ nav{
     margin-left: 17px;
   }
 }
-
