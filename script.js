@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const passwordInput = document.querySelector("#Password");
   const enviarButton = document.querySelector("#Enviar");
   const Result = document.querySelector("#Result");
+  const logoutButton = document.querySelector("#Logout");
+  const logIn = document.querySelector("#LogIn");
+  const signIn = document.querySelector("#signIn");
   let Users = [];
 
   function showMessage(element, text, color) {
@@ -24,8 +27,19 @@ document.addEventListener("DOMContentLoaded", function () {
   function hideLoginForm() {
     usernameInput.style.display = "none";
     passwordInput.style.display = "none";
-    enviarButton.style.display = "none";
+    enviarButton.style.display = "none";  
+    logIn.style.display = "none";
+    signIn.style.display = "none";
     Result.style.display = "flex";
+  }
+
+  function showLoginForm() {
+    usernameInput.style.display = "block";
+    passwordInput.style.display = "block";
+    enviarButton.style.display = "block";
+    logIn.style.display = "block";
+    signIn.style.display = "block";
+    Result.style.display = "none";
   }
 
   function login() {
@@ -44,7 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     if (user) {
+      localStorage.setItem("loggedIn", "true");
       hideLoginForm();
+      updateLogoutButtonVisibility(true);
     } else {
       showMessage(Message1, "Usuário ou senha incorretos!", "red");
     }
@@ -76,6 +92,20 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#PasswordRG").value = "";
   }
 
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    showLoginForm();
+    updateLogoutButtonVisibility(false);
+  }
+
+  function updateLogoutButtonVisibility(loggedIn) {
+    if (loggedIn) {
+      logoutButton.style.display = "block";
+    } else {
+      logoutButton.style.display = "none";
+    }
+  }
+
   Enviar.addEventListener("click", login);
   loginForm.addEventListener("keypress", function (event) {
     if (event.keyCode === 13) {
@@ -89,6 +119,18 @@ document.addEventListener("DOMContentLoaded", function () {
       cadastro();
     }
   });
+
+  logoutButton.addEventListener("click", logout);
+
+  const loggedIn = localStorage.getItem("loggedIn");
+  if (loggedIn === "true") {
+    hideLoginForm();
+    updateLogoutButtonVisibility(true);
+  } else {
+    showLoginForm();
+    updateLogoutButtonVisibility(false);
+  }
+
   console.log("O DOM foi completamente carregado!");
 });
 
@@ -104,12 +146,4 @@ window.addEventListener("scroll", function () {
   } else {
     arrowTop.style.display = "none";
   }
-});
-
-function alterarLinkSemRecarga(link) {
-  history.replaceState(null, "", link);
-}
-
-window.addEventListener("scroll", function () {
-  alterarLinkSemRecarga("https://thailson13.github.io/ProjetoRaizesDoMangue");
 });
