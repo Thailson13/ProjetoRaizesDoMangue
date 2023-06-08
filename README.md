@@ -5,6 +5,8 @@ PT - Este projeto constitui uma extensão do trabalho que venho desenvolvendo du
 
 EN - This project constitutes an extension of the work that I have been developing during my current academic career, with the objective of obtaining my degree. I maintain the firm commitment to promote constant updates, aiming to improve and expand the existing functionalities.
 
+[Clique aqui para acessar o site do projeto](https://thailson13.github.io/ProjetoRaizesDoMangue/)
+
 # Tecnologias usadas no projeto! - Technologies used in the project!
 1. HTML
 2. CSS
