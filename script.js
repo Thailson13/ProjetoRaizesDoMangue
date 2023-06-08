@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function cadastro() {
-    const usernameRG = document.getElementById("UsernameRG").value;
-    const passwordRG = document.getElementById("PasswordRG").value;
+    const usernameRG = document.querySelector("#UsernameRG").value;
+    const passwordRG = document.querySelector("#PasswordRG").value;
 
     if (!usernameRG || !passwordRG) {
       showMessage(Message2, "Parâmetros incompletos!", "red");
@@ -72,8 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("Users", JSON.stringify(Users));
 
     showMessage(Message2, "Registro efetuado com sucesso!", "#228b22");
-    document.getElementById("UsernameRG").value = "";
-    document.getElementById("PasswordRG").value = "";
+    document.querySelector("#UsernameRG").value = "";
+    document.querySelector("#PasswordRG").value = "";
   }
 
   Enviar.addEventListener("click", login);
@@ -92,12 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("O DOM foi completamente carregado!");
 });
 
-const arrowTop = document.getElementById("arrowTop");
+const arrowTop = document.querySelector("#arrowTop");
 
 arrowTop.addEventListener("click", function top() {
   window.scroll(0, 0);
 });
-setTimeout(top, 50000);
+
 window.addEventListener("scroll", function () {
   if (window.scrollY > 100) {
     arrowTop.style.display = "flex";
@@ -106,3 +106,10 @@ window.addEventListener("scroll", function () {
   }
 });
 
+function alterarLinkSemRecarga(link) {
+  history.replaceState(null, "", link);
+}
+
+window.addEventListener("scroll", function () {
+  alterarLinkSemRecarga("https://thailson13.github.io/ProjetoRaizesDoMangue");
+});

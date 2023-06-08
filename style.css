@@ -213,7 +213,7 @@ body {
 
 .carousel-item img {
   object-fit: cover;
-  height: 30vh;
+  height: 50vh;
 }
 
 .text-reset {
