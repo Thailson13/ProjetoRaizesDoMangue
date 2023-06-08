@@ -89,6 +89,20 @@ document.addEventListener("DOMContentLoaded", function () {
       cadastro();
     }
   });
-
   console.log("O DOM foi completamente carregado!");
 });
+
+const arrowTop = document.getElementById("arrowTop");
+
+arrowTop.addEventListener("click", function top() {
+  window.scroll(0, 0);
+});
+setTimeout(top, 50000);
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 100) {
+    arrowTop.style.display = "flex";
+  } else {
+    arrowTop.style.display = "none";
+  }
+});
+

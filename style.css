@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #F0F2F5;
+  background: #f0f2f5;
 }
 
 .buttonC button {
@@ -17,21 +17,21 @@ body {
 }
 
 .buttonColor {
-  background: #3290d3;
+  background: #1877f2;
   border-radius: 8px;
-  color: white;
+  color: #ffffff;
   border: none;
 }
 
 .buttonColor:hover {
   background: #2178b6;
-  color: white;
+  color: #ffffff;
   border: none;
 }
 
 .buttonColor:focus {
   background: #2178b6;
-  color: white;
+  color: #ffffff;
   border: none;
 }
 
@@ -41,12 +41,12 @@ body {
   margin-right: 10px;
 }
 
-.card-title{
+.card-title {
   font-size: 2vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-.card-text{
-  font-family: 'Crimson Text', serif;
+.card-text {
+  font-family: "Crimson Text", serif;
   font-size: 1.9vh;
 }
 
@@ -55,20 +55,20 @@ body {
   padding-right: 10px;
 }
 
-.gitHub{
+.gitHub {
   color: #181717;
 }
 
-.youtube{
-  color: #FF0000;
+.youtube {
+  color: #ff0000;
 }
 
-.facebook{
-  color: #1877F2;
+.facebook {
+  color: #1877f2;
 }
 
-.instagram{
-  color: #E4405F;
+.instagram {
+  color: #e4405f;
 }
 
 .buttonReset {
@@ -107,7 +107,7 @@ body {
 }
 
 .navbar {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 #btnRGNL {
@@ -120,8 +120,8 @@ body {
 
 .dropdown-menu {
   padding: 5px;
-  background: #FFFFFF;
-  border: 1px solid #3290d3;
+  background: #ffffff;
+  border: 1px solid #1877f2;
   text-align: center;
 }
 
@@ -130,7 +130,6 @@ body {
   margin-top: 5px;
   padding: 0px;
 }
-
 
 .bRT {
   border-top-left-radius: 4px;
@@ -143,18 +142,18 @@ body {
 }
 
 .dropdown-item {
-  color: #3290d3;
+  color: #1877f2;
 }
 
-.bRT{
+.bRT {
   border-bottom: solid 1px;
 }
 
-.bRB{
+.bRB {
   border-top: solid 1px;
 }
 
-.bRM{
+.bRM {
   border-bottom: solid 1px;
 }
 
@@ -183,7 +182,6 @@ body {
   margin-left: 20px;
 }
 
-
 .border {
   border-left: solid 1px black;
 }
@@ -209,7 +207,7 @@ body {
   text-align: justify;
 }
 
-.bdR8px{
+.bdR8px {
   border-radius: 8px;
 }
 
@@ -223,19 +221,19 @@ body {
 }
 
 footer {
-  background: #FFFFFF;
-  color: #3A3B3C ;
+  background: #ffffff;
+  color: #3a3b3c;
 }
 
 p {
   margin-bottom: 8px;
 }
 
-.m-a{
+.m-a {
   margin: auto;
 }
 
-.btnD svg{
+.btnD svg {
   margin: auto;
   margin-left: 3px;
 }
@@ -246,6 +244,12 @@ p {
   background-color: #228b22;
   border-radius: 4px;
   text-align: center;
+}
+
+#arrowTop{
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
 }
 
 #ContainerLT {
@@ -323,15 +327,15 @@ p {
   }
 }
 
-.textAnimation{
+.textAnimation {
   animation: fromTop 0.4s backwards;
 }
 
-nav{
+nav {
   animation: fromTop 0.4s backwards;
 }
 
-.dropdown-menu.show{
+.dropdown-menu.show {
   animation: fromRight 0.4s backwards;
 }
 
@@ -354,5 +358,12 @@ nav{
 
   #btnLN {
     margin-left: 17px;
+  }
+}
+
+
+@media (min-height: 2040px){
+  #arrowTop{
+    width: 70px  ;
   }
 }
