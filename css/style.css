@@ -186,9 +186,7 @@ main{
 }
 
 @media (max-width: 390px) {
-  .textCard{
-    width: 100vw;
-  }
+ 
   .container-text{
     width: 100vw;
   }
