@@ -72,6 +72,7 @@ footer{
   -webkit-user-select: none;
 }
 
+
 .logoRDM {
   pointer-events: none;
 }
@@ -144,7 +145,7 @@ footer{
 }
 
 .titleCard {
-  font-size: 1.7em;
+  font-size: 2vw;
   margin-bottom: 30px;
   color: #3B5998;
 }
@@ -175,6 +176,7 @@ main{
 .textCard {
   margin-bottom: 0 !important;
   width: 50vw;
+  font-size: 1.1vw;
   text-align: justify;
   margin: auto;
 }
