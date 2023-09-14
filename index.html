@@ -1,553 +1,194 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="img/IconMestick.png" />
+    <title>Raízes do Mangue</title>
+    <!-- Nativo -->
+    <script src="js/main.js" type="module"></script>
+    <link rel="shortcut icon" href="img/mangrove.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components/darkTheme.css" />
+    <link rel="stylesheet" href="css/components/buttonTheme.css" />
+    <link rel="stylesheet" href="css/components/button.css" />
+    <link rel="preconnect" href="https://btn-audio.googleapis.com" />
+    <link rel="stylesheet" href="css/components/input.css" />
+    <!-- Import Bootstrap -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-
+    <!-- Import MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+      rel="stylesheet"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Montserrat:wght@600&family=Roboto:wght@700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <title>Raízes do Mangue</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <div class="d-flex">
-            <img class="navbar-brand Avatar" src="img/hermit-crab.png" />
-            <p class="mR10px rName">Raízes do Mangue</p>
-          </div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+    <nav class="navbar fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-brand tittleRaizes d-flex" id="btnReload">
+          <img src="img/mangrove.png" alt="logo" class="logoRDM" />
+          <p class="rdm">RDM</p>
+        </div>
+        <div class="container-button">
+          <button class="btn-sr btnColor">
+            <i class="bi bi-person-fill btnColor"></i>
+            Sing In
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="navbar-nav me-auto mb-2 mb-lg-0">
-              <div class="nav-item dropdown">
-                <button
-                  class="nav-link dropdown-toggle buttonColor p-2 borderNone"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-list-ul"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
-                    />
-                  </svg>
-                </button>
-                <div class="dropdown-menu">
-                  <a
-                    class="dropdown-item bRT"
-                    href="#protecao-manguezais-chamado-parque-gracas"
-                    >Preservação dos Manguezais: Chamado urgente</a
-                  >
-                  <a
-                    class="dropdown-item bRM"
-                    href="#projeto-parque-gracas-requalificacao-sustentavel"
-                    >Requalificação Urbana Sustentável: Parque das Graças
-                  </a>
-                  <a
-                    class="dropdown-item bRM"
-                    href="#impactos-ambientais-projeto-parque-gracas"
-                    >Impactos Ambientais: Projeto Parque Graças</a
-                  >
-                  <a
-                    class="dropdown-item bRM"
-                    href="#iresiliencia-manguezais-guardioes-clima-costa"
-                    >Manguezais resilientes: guardiões climáticos costeiros</a
-                  >
-                  <a
-                    class="dropdown-item"
-                    href="#poder-manguezais-guardioes-cidades-costeiras"
-                    >Manguezais: Poder nas cidades costeiras.</a
-                  >
-                  <a
-                    class="dropdown-item bRB"
-                    href="#seducao-silencio-submerso-estragos-assoreamento"
-                    >Assoreamento silencioso: Estragos invisíveis</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="d-flex buttonC">
-              <button
-                id="LogIn"
-                type="button"
-                class="btn btn-primary buttonColor btnD"
-                data-bs-toggle="modal"
-                data-bs-target="#logModal"
-              >
-                <p>
-                  LOG IN
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-box-arrow-in-right m-a"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
-                    />
-                  </svg>
-                </p>
-              </button>
-              <button
-              id="Logout"
-              class="buttonColor btnD"
-              type="button"
-            >
-              SAIR
-            </button>
-              <button
-                id="signIn"
-                class="btn btn-primary buttonColor btnD"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight"
-              >
-                <p>
-                  SIGN IN
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-person-fill-add m-a"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                    />
-                    <path
-                      d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"
-                    />
-                  </svg>
-                </p>
-              </button>
-            </div>
-          </div>
+          <button class="btn-sr btnColor">
+            <i class="bi bi-person-fill-add btnColor"></i>
+            Register
+          </button>
         </div>
-      </nav>
-      <div class="modal fade" id="logModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="labelLogIn">Login</h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body" id="LogIn">
-              <form id="loginForm">
-                <label for="recipient-name" class="col-form-label"
-                  >Login:
-                </label>
-                <input
-                  type="text"
-                  class="form-control spaceInput Username"
-                  id="Username"
-                  placeholder="Username"
-                />
-                <input
-                  type="password"
-                  class="form-control spaceInput Password"
-                  placeholder="Password"
-                  id="Password"
-                />
-                <div class="d-flex d-m">
-                  <button
-                    type="button"
-                    class="btn btn-secondary spaceInput buttonColor"
-                    value="Enviar"
-                    id="Enviar"
-                  >
-                    Entrar
-                  </button>
-                  <p id="Message1" class="Message"></p>
-                </div>
-                <span class="btn btn-success spaceInput" id="Result"
-                  >Logado</span
-                >
-              </form>
-              <div class="modal-footer"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div
-        class="offcanvas offcanvas-end"
-        tabindex="-1"
-        id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel"
-      >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasRightLabel">Registro</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body">
-          <div class="container" id="RGNL">
-            <form id="cad-usuario-form">
-              <div class="form-group">
-                <label>Username</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="UsernameRG"
-                  placeholder="Digite um Username"
-                />
-              </div>
-              <div class="form-group">
-                <label>Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="PasswordRG"
-                  placeholder="Digite uma Password"
-                />
-              </div>
-              <p id="Message2" class="Message"></p>
+        <button
+          class="navbar-toggler iconMenu"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas"
+          aria-controls="offcanvas"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list btnColor"></i>
+        </button>
+        <div
+          class="offcanvas offcanvas-start text-bg-dark"
+          tabindex="-1"
+          id="offcanvas"
+          aria-labelledby="Menu"
+        >
+          <div class="offcanvas-header">
+            <label class="theme-switch">
               <input
-                type="button"
-                value="Cadastrar"
-                class="btn btn-secondary buttonColor"
-                id="btnRGNL"
+                type="checkbox"
+                class="theme-switch__checkbox"
+                id="checkboxTheme"
               />
-            </form>
-          </div>
-        </div>
-      </div>
-      <div id="Container">
-        <div
-          class="card textAnimation"
-          id="protecao-manguezais-chamado-parque-gracas"
-        >
-          <div class="card-body bodyText">
-            <h1 class="card-title">
-              Protegendo os Manguezais:
-              <p>O Chamado à Ação do Parque das Graças</p>
-            </h1>
-            <p id="INER" class="card-text">
-              O propósito primordial do presente projeto reside no estímulo ao
-              debate cívico acerca da devastação dos manguezais e das suas
-              repercussões imediatas e futuras na sociedade. A intenção
-              subjacente é abordar a empreitada do Parque das Graças, o qual tem
-              por desígnio aproveitar o leito fluvial e o ecossistema manguezal
-              como alicerce para a edificação de um dos trinta parques
-              contemplados no esquema urbanístico do Recife. A flagrante
-              destruição dos manguezais é testemunhada cotidianamente, sendo
-              hábil e abundantemente documentada por meio de fotografias que
-              patenteiam as alterações territoriais em curso e suas nefastas
-              consequências. Comparativos estudos amparam incontestavelmente a
-              estreita conexão entre essa temerária devastação, os fenômenos
-              naturais catastróficos e as vicissitudes climáticas, as quais
-              acarretam severos impactos na coletividade e comprometem
-              sobremaneira a fauna e a flora dos manguezais. Em derradeira
-              análise, delineamos um plano para a erradicação desse pernicioso
-              cenário, o qual engloba a criação de um site eletrônico
-              informativo, o desenvolvimento de projetos, a fixação de metas e a
-              implementação de ferramentas que visam à conscientização e à
-              educação da população.
-            </p>
-            <div
-              id="carrosselSobre"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="img/Sobre/Sobre01.jpg"
-                    class="d-block w-100 bdR8px"
-                    alt="Slide 1"
-                  />
+              <div class="theme-switch__container">
+                <div class="theme-switch__clouds"></div>
+                <div class="theme-switch__stars-container">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 144 55"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
                 </div>
-                <div class="carousel-item">
-                  <img
-                    src="img/Sobre/Sobre02.jpg"
-                    class="d-block w-100 bdR8px"
-                    alt="Slide 2"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="img/Sobre/Sobre03.jpg"
-                    class="d-block w-100 bdR8px"
-                    alt="Slide 3"
-                  />
+                <div class="theme-switch__circle-container">
+                  <div class="theme-switch__sun-moon-container">
+                    <div class="theme-switch__moon">
+                      <div class="theme-switch__spot"></div>
+                      <div class="theme-switch__spot"></div>
+                      <div class="theme-switch__spot"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carrosselSobre"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carrosselSobre"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+            </label>
+            <h1 class="offcanvas-title" id="Menu">MENU</h1>
+            <button
+              type="button"
+              class="btn-x"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="d-flex">
+              <button class="btn-light">Search</button>
             </div>
           </div>
         </div>
-        <div
-          class="card textAnimation"
-          id="projeto-parque-gracas-requalificacao-sustentavel"
-        >
-          <div class="card-body">
-            <h1 class="card-title">
-              Projeto Parque das Graças:
-              <p>
-                Requalificação Urbana e Sustentabilidade na Região do Recife
-              </p>
-            </h1>
-            <p class="card-text">
-              O projeto Parque das Graças é fruto de um acordo colaborativo
-              entre várias partes interessadas, incluindo o poder público, os
-              residentes da região das Graças e a Universidade Maurício de
-              Nassau. Inicialmente concebido como uma via de quatro faixas para
-              veículos, que aproveitaria o leito do rio para conectar duas
-              importantes vias do Recife, nomeadamente a Rua Amélia e a Rua
-              Joaquim Nabuco, abrangendo os bairros Torre, Graças e Derby. Após
-              extensas negociações ao longo dos anos, o projeto passou por
-              diversas modificações até a sua configuração atual. A proposta
-              atual do projeto incorpora soluções urbanísticas que permitem a
-              aproximação ao rio, por meio de passarelas que percorrem suas
-              margens e manguezais, bem como a inclusão de píeres para o acesso
-              de pequenas embarcações. Além disso, as ruas que se conectam ao
-              rio serão requalificadas, com o intuito de transformar a
-              experiência de caminhar pelo bairro, criando conexões entre
-              espaços verdes e públicos, em conformidade com as diretrizes do
-              Parque Capibaribe. Essas diretrizes visam a recuperação ambiental,
-              promoção da mobilidade não motorizada, integração socioespacial e
-              ativação dos espaços públicos.
-            </p>
-            <p class="card-text">
-              Após extensas negociações ao longo dos anos, o projeto passou por
-              diversas modificações até a sua configuração atual. A proposta
-              atual do projeto incorpora soluções urbanísticas que permitem a
-              aproximação ao rio, por meio de passarelas que percorrem suas
-              margens e manguezais, bem como a inclusão de píeres para o acesso
-              de pequenas embarcações. Além disso, as ruas que se conectam ao
-              rio serão requalificadas, com o intuito de transformar a
-              experiência de caminhar pelo bairro, criando conexões entre
-              espaços verdes e públicos, em conformidade com as diretrizes do
-              Parque Capibaribe. Essas diretrizes visam a recuperação ambiental,
-              promoção da mobilidade não motorizada, integração socioespacial e
-              ativação dos espaços públicos.
-            </p>
-          </div>
-        </div>
-        <div
-          class="card textAnimation"
-          id="impactos-ambientais-projeto-parque-gracas"
-        >
-          <div class="card-body">
-            <h1 class="card-title">
-              Impactos ambientais do projeto Parque das Graças:
-              <p>uma análise aprofundada</p>
-            </h1>
-            <p class="card-text">
-              O projeto Parque das Graças em Recife consiste em uma iniciativa
-              de requalificação urbanística, que inclui a criação de mais de 30
-              parques fluviais na região metropolitana. Esses parques
-              aproveitarão os leitos dos rios e manguezais, porém é fundamental
-              considerar os potenciais problemas ambientais e impactos no leito
-              dos rios, na fauna, na flora e no solo das áreas afetadas.
-            </p>
-            <p class="card-text">
-              É amplamente reconhecido que o manguezal, juntamente com todo o
-              seu ecossistema circundante, é essencial para o equilíbrio
-              natural, tanto localmente quanto em outros lugares. O mangue
-              desempenha um papel crucial como berçário para a vida marinha,
-              sendo o local de reprodução e alimentação de inúmeras espécies,
-              contribuindo para a criação de um ciclo vital. Além da vida
-              marinha, o manguezal abriga uma diversidade de animais, como
-              crustáceos, aves migratórias, aves próprias do mangue, peixes,
-              répteis e mamíferos. Podemos citar, por exemplo, garças, lontras,
-              capivaras, uma variedade de peixes, caranguejos, camarões, jacarés
-              e até mesmo animais marinhos, que dependem do manguezal para se
-              reproduzir com segurança e se alimentar, pois suas presas
-              encontram abrigo e se reproduzem no mangue, graças à sua
-              abundância de alimentos e às extensas raízes das árvores.
-            </p>
-            <p class="card-text">
-              Não são apenas os animais que dependem do mangue, mas também os
-              seres humanos. Nossa sobrevivência e um futuro sustentável estão
-              intrinsecamente ligados a essa rica biodiversidade. Portanto, é de
-              extrema importância considerar cuidadosamente os impactos do
-              projeto e adotar medidas mitigadoras para garantir a preservação
-              desse valioso ecossistema.
-            </p>
-          </div>
-        </div>
-        <div
-          class="card textAnimation"
-          id="iresiliencia-manguezais-guardioes-clima-costa"
-        >
-          <div class="card-body">
-            <h1 class="card-title">
-              A Resiliência dos Manguezais:
-              <p>Guardiões do Clima e Protetores da Costa</p>
-            </h1>
-            <p class="card-text">
-              Os manguezais são ecossistemas característicos de regiões
-              tropicais costeiras, onde ocorre a interação entre águas fluviais
-              (doce) e marítimas (salgadas). O solo dessas áreas é
-              predominantemente lamacento, rico em matéria orgânica, e serve
-              como substrato para o desenvolvimento de vegetações adaptadas à
-              salinidade. Essas plantas apresentam características peculiares,
-              como raízes respiratórias conhecidas como pneumatóforos, que
-              permitem a captação de oxigênio e a fixação das plantas no
-              ambiente.
-            </p>
-            <p class="card-text">
-              Os manguezais são reconhecidos pela sua capacidade de absorver
-              grandes quantidades de gás carbônico da atmosfera, um fenômeno
-              conhecido como "sequestro de carbono". Esse processo consiste na
-              transferência de carbono da atmosfera para o solo e a água por
-              meio das árvores presentes nos mangues. Além de desempenhar um
-              papel fundamental nos processos bioquímicos naturais, o sequestro
-              de carbono contribui para combater o aquecimento global e as
-              mudanças climáticas em escala global. Portanto, os manguezais
-              exercem influência nos diversos processos ambientais relacionados
-              às mudanças climáticas, como o derretimento das calotas polares e
-              o branqueamento dos corais.
-            </p>
-            <p class="card-text">
-              Em resumo, os manguezais são ecossistemas aquáticos
-              característicos de regiões tropicais costeiras, que apresentam
-              vegetações adaptadas à salinidade e desempenham um papel crucial
-              no sequestro de carbono e na mitigação das mudanças climáticas
-              globais.
-            </p>
-          </div>
-        </div>
-        <div
-          class="card textAnimation"
-          id="poder-manguezais-guardioes-cidades-costeiras"
-        >
-          <div class="card-body">
-            <h1 class="card-title">
-              O Poder Silencioso dos Manguezais:
-              <p>Guardiões Inabaláveis das Cidades Costeiras</p>
-            </h1>
-            <p class="card-text">
-              A vegetação de mangue desempenha um papel crucial na mitigação dos
-              impactos da água do mar em regiões costeiras, fornecendo uma linha
-              de defesa natural contra a erosão causada por marés, tempestades,
-              aumento do nível do mar e até mesmo tsunamis. Relatórios
-              ambientais internacionais ressaltam a importância dos manguezais
-              em cidades costeiras ao longo da história, especialmente
-              evidenciada na redução dos danos causados pelo devastador tsunami
-              do Oceano Índico em 2004. Embora o Brasil seja privilegiado por
-              sua localização geológica, nunca tendo sido atingido por esse
-              fenômeno natural, é vital reconhecer que outros eventos
-              ambientais, como enchentes e alagamentos induzidos pela elevação
-              das marés, podem causar sérios estragos ao litoral do país.
-            </p>
-          </div>
-        </div>
-        <div
-          class="card textAnimation"
-          id="seducao-silencio-submerso-estragos-assoreamento"
-        >
-          <div class="card-body">
-            <h1 class="card-title">
-              A Sedução do Silêncio Submerso:
-              <p>Os Estragos Invisíveis do Assoreamento</p>
-            </h1>
-            <p class="card-text">
-              O assoreamento de cursos d'água é um processo caracterizado pelo
-              acúmulo de sedimentos, solo e detritos diversos no leito de rios,
-              baías e lagos, resultando na redução do volume de água e na
-              deterioração dos habitats naturais. Esse fenômeno compromete a
-              transparência da água, dificultando a entrada de luz e afetando
-              significativamente o processo vital de fotossíntese das espécies
-              vegetais. Além disso, o assoreamento aumenta consideravelmente o
-              risco de enchentes, uma vez que a diminuição do volume dos rios
-              favorece o transbordamento das águas, comprometendo a
-              navegabilidade das embarcações. Embora seja um processo natural,
-              sua intensificação é atribuída à ação humana, principalmente o
-              desmatamento de florestas de mangue.
-            </p>
-          </div>
-        </div>
       </div>
-      <img src="img/seta-para-cima.png" alt="" id="arrowTop" />
+    </nav>
+    <main>
+      <section class="card-Text">
+        <div class="container-text">
+          <div class="d-flex headerCard">
+            <p class="por">Por:</p>
+            <i class="bi bi-person-circle userProfile">Thailson Júlio</i>
+          </div>
+          <div class="audioCard">
+            <audio
+              src="aud/Sobre.mp3"
+              id="audioAbout"
+              type="audio/mpeg"
+            ></audio>
+            <button class="btn-audio" id="Play">
+              <i class="bi bi-play-circle-fill"></i>
+            </button>
+            <button class="btn-audio" id="Pause">
+              <i class="bi bi-pause-circle-fill"></i>
+            </button>
+            <button class="btn-audio" id="Up">
+              <i class="bi bi-volume-up-fill"></i>
+            </button>
+            <button
+              data-bs-container="body"
+              data-bs-toggle="popover"
+              data-bs-placement="top"
+              class="btn-audio btn-lg"
+              id="Down"
+            >
+              <i class="bi bi-volume-down-fill"></i>
+            </button>
+          </div>
+          <img
+            src="img/FisrtIMG.jpg"
+            alt="fisrt img"
+            class="fisrtIMG w-75"
+            id="firstIMG"
+          />
+          <h1 class="titleCard">
+            Protegendo os Manguezais: O Chamado à Ação do Parque das Graças
+          </h1>
+          <p class="textCard">
+            O propósito primordial do presente projeto reside no estímulo ao
+            debate cívico acerca da devastação dos manguezais e das suas
+            repercussões imediatas e futuras na sociedade. A intenção subjacente
+            é abordar a empreitada do Parque das Graças, o qual tem por desígnio
+            aproveitar o leito fluvial e o ecossistema manguezal como alicerce
+            para a edificação de um dos trinta parques contemplados no esquema
+            urbanístico do Recife. A flagrante destruição dos manguezais é
+            testemunhada cotidianamente, sendo hábil e abundantemente
+            documentada por meio de fotografias que patenteiam as alterações
+            territoriais em curso e suas nefastas consequências. Comparativos
+            estudos amparam incontestavelmente a estreita conexão entre essa
+            temerária devastação, os fenômenos naturais catastróficos e as
+            vicissitudes climáticas, as quais acarretam severos impactos na
+            coletividade e comprometem sobremaneira a fauna e a flora dos
+            manguezais. Em derradeira análise, delineamos um plano para a
+            erradicação desse pernicioso cenário, o qual engloba a criação de um
+            site eletrônico informativo, o desenvolvimento de projetos, a
+            fixação de metas e a implementação de ferramentas que visam à
+            conscientização e à educação da população.
+          </p>
+        </div>
+      </section>
     </main>
     <footer class="text-center text-lg-start">
       <section
@@ -591,7 +232,10 @@
         <div class="container text-center text-md-start mt-5">
           <div class="row mt-3">
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold mb-4">Raízes do Mangue</h6>
+              <h6 class="text-uppercase fw-bold mb-4 companyRDM">
+                <img src="img/mangrove.png" alt="" class="logoRDM me-3" />Raízes do
+                Mangue
+              </h6>
               <p>
                 A destruição implacável dos manguezais impede o ser humano de
                 alcançar saúde e paz. Esses ecossistemas vitais são
@@ -679,8 +323,11 @@
           </div>
         </div>
       </section>
-      <div class="text-center p-4" style="background-color: #0000000d">
-        © 2022 Raízes do Mangue
+      <div class="text-center p-4 Copyright">
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >Raízes do Mangue LTDA</a
+        >
       </div>
     </footer>
   </body>

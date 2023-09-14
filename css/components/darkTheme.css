@@ -1,0 +1,43 @@
+[data-tema="dark-mode"] .bi-arrow-repeat,
+[data-tema="dark-mode"] .offcanvas-title,
+[data-tema="dark-mode"] .search,
+[data-tema="dark-mode"] .tittleRaizes,
+[data-tema="dark-mode"] .btn-x,
+[data-tema="dark-mode"] .btnColor,
+[data-tema="dark-mode"] .iconMenu {
+  color: #c4c9d1 !important;
+}
+
+[data-tema="dark-mode"] .navbar,
+[data-tema="dark-mode"] .offcanvas-header,
+[data-tema="dark-mode"] #btnSearch {
+  background-color: #1d1f2c !important;
+}
+
+[data-tema="dark-mode"] .btn-audio {
+  border: solid #1d1f2c 1px !important;
+}
+[data-tema="dark-mode"] .btn-audio i,
+[data-tema="dark-mode"] .userProfile {
+  color: #1d1f2c;
+}
+
+[data-tema="dark-mode"] .btn-light {
+  --color: #1d1f2c;
+}
+
+ .btn-light:active:before{
+  background: #181924;
+}
+
+
+[data-tema="dark-mode"] main {
+  background: #575861;
+}
+
+[data-tema="dark-mode"]  .titleCard{
+color: #181924;
+}
+[data-tema="dark-mode"] .textCard, [data-tema="dark-mode"] .por{
+  color: #C4C9D1 ;
+}
