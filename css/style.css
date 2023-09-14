@@ -186,6 +186,14 @@ main{
 }
 
 @media (max-width: 390px) {
+
+  .textCard{
+    width: 75gvw;
+  }
+  .container-text{
+    width: 100vw;
+  }
+
   .titleCard{
     font-size: 10pt;
   }
