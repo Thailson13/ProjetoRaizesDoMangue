@@ -136,24 +136,6 @@ footer{
   font-size: 1em;
 }
 
-.container-text {
-  width: 70vw;
-  margin: auto;
-  border-radius: 8px;
-  padding: 30px;
-
-}
-
-.titleCard {
-  font-size: 1.4vw;
-  margin-bottom: 30px;
-  color: #3B5998;
-}
-
-.container-text h1 {
-  text-align: center;
-}
-
 .fisrtIMG {
   display: flex;
   margin: auto;
@@ -173,11 +155,49 @@ main{
   padding-left: 5px;
 }
 
+.container-text {
+  width: 70vw;
+  margin: auto;
+  border-radius: 8px;
+  padding: 30px;
+
+}
+
+.container-text h1 {
+  text-align: center;
+}
+
+.titleCard {
+  font-size: 2vh;
+  margin-bottom: 30px;
+  color: #3B5998;
+}
+
+
 .textCard {
   margin-bottom: 0 !important;
   width: 50vw;
-  font-size: 1vw;
   text-align: justify;
   margin: auto;
 }
 
+.textCard {
+  font-size: 16px;
+}
+
+@media (max-width: 390px) {
+  .titleCard{
+    font-size: 10pt;
+  }
+  .card-Text .textCard {
+    font-size: 8pt;
+  }
+
+  p{
+    font-size: 8pt;
+  }
+
+  h1{
+    font-size: 10pt;
+  }
+}
