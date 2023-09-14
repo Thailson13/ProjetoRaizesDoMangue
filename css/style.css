@@ -145,7 +145,7 @@ footer{
 }
 
 .titleCard {
-  font-size: 2vw;
+  font-size: 1.4vw;
   margin-bottom: 30px;
   color: #3B5998;
 }
@@ -176,7 +176,7 @@ main{
 .textCard {
   margin-bottom: 0 !important;
   width: 50vw;
-  font-size: 1.1vw;
+  font-size: 1vw;
   text-align: justify;
   margin: auto;
 }
