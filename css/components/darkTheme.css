@@ -10,7 +10,9 @@
 
 [data-tema="dark-mode"] .navbar,
 [data-tema="dark-mode"] .offcanvas-header,
-[data-tema="dark-mode"] #btnSearch {
+[data-tema="dark-mode"] #btnSearch,
+[data-tema="dark-mode"] footer
+ {
   background-color: #1d1f2c !important;
 }
 
@@ -26,18 +28,20 @@
   --color: #1d1f2c;
 }
 
- .btn-light:active:before{
-  background: #181924;
-}
-
 
 [data-tema="dark-mode"] main {
   background: #575861;
 }
 
-[data-tema="dark-mode"]  .titleCard{
+[data-tema="dark-mode"]  .titleCard
+{
 color: #181924;
 }
+
+[data-tema="dark-mode"] .Copyright {
+  background-color: #181924;
+}
+
 [data-tema="dark-mode"] .textCard, [data-tema="dark-mode"] .por{
   color: #C4C9D1 ;
 }
