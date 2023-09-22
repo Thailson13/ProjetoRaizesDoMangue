@@ -88,6 +88,7 @@ box-shadow: none !important;
   margin-top: 20px;
   text-align: center;
   font-family: 'Inter', sans-serif;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
