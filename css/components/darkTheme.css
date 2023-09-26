@@ -8,6 +8,8 @@
   color: #E6EDF3 !important;
 }
 
+
+
 [data-tema="dark-mode"] .navbar,
 [data-tema="dark-mode"] .offcanvas-header,
 [data-tema="dark-mode"] #btnSearch,
@@ -44,4 +46,9 @@
 
 [data-tema="dark-mode"] .text {
   color: white ;
+}
+
+[data-tema="dark-mode"] .ui-btn{
+  --btn-default-bg:  #333333;
+  --btn-hover-bg: rgb(41, 41, 41);
 }

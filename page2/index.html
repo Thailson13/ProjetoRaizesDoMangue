@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raízes do Mangue</title>
+    <!-- Nativo -->
+    <script src="/js/main.js" type="module"></script>
+    <link rel="shortcut icon" href="/img/mangrove.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/components/darkTheme.css" />
+    <link rel="stylesheet" href="/css/components/buttonTheme.css" />
+    <link rel="stylesheet" href="/css/components/button.css" />
+    <link rel="stylesheet" href="/css/components/prev-next.css" />
+    <!-- Import Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Import MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Import GoogleFont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-brand tittleRaizes d-flex" id="btnReload">
+            <img src="/img/mangrove.png" alt="logo" class="logoRDM" />
+            <p class="rdm">RDM</p>
+          </div>
+          <div class="container-button"></div>
+          <button
+            class="navbar-toggler iconMenu"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvas"
+            aria-controls="offcanvas"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list btnColor"></i>
+          </button>
+          <div
+            class="offcanvas offcanvas-start text-bg-dark"
+            tabindex="-1"
+            id="offcanvas"
+            aria-labelledby="Menu"
+          >
+            <div class="offcanvas-header">
+              <label class="theme-switch">
+                <input
+                  type="checkbox"
+                  class="theme-switch__checkbox"
+                  id="checkboxTheme"
+                />
+                <div class="theme-switch__container">
+                  <div class="theme-switch__clouds"></div>
+                  <div class="theme-switch__stars-container">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 144 55"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="theme-switch__circle-container">
+                    <div class="theme-switch__sun-moon-container">
+                      <div class="theme-switch__moon">
+                        <div class="theme-switch__spot"></div>
+                        <div class="theme-switch__spot"></div>
+                        <div class="theme-switch__spot"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <h1 class="offcanvas-title" id="Menu">MENU</h1>
+              <button
+                type="button"
+                class="btn-x"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              >
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="d-flex">
+                <button class="btn-light">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container">
+        <div class="card">
+          <div class="persona">
+            <p class="text">
+              Por: <i class="bi bi-person-circle"></i> Matheus Vitório
+            </p>
+          </div>
+          <div class="card-body">
+            <h1 class="title w-75 removeW75 m-auto">
+              OBJETIVOS DO PROJETO: RAÍZES DO MANGUE
+            </h1>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              • Observar e desenvolver estratégias para mitigar os impactos
+              ambientais ocasionados pela obra em questão;
+            </p>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              • Promover a sensibilização da população residente em Recife
+              acerca das consequências do desmatamento e da degradação da fauna
+              dos ecossistemas de manguezais;
+            </p>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              • Realizar projeções que avaliem os danos ambientais potenciais e
+              suas ramificações;
+            </p>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              • Combater ativamente a prática de desmatamento nos manguezais;
+            </p>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              • Estabelecer e utilizar nosso sítio eletrônico como uma
+              ferramenta eficaz para disseminar informações e promover a
+              educação ambiental entre os membros da sociedade;
+            </p>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              • Conceber métodos educacionais para a implementação das propostas
+              que desenvolvemos;
+            </p>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              • Buscar parcerias colaborativas com empresas, organizações não
+              governamentais e entidades governamentais visando à implementação
+              e à divulgação dos princípios que defendemos;
+            </p>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              • Sugerir alternativas para a utilização dos manguezais que sejam
+              menos prejudiciais tanto ao projeto Parque do Capibaribe quanto ao
+              governo estadual.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="container mt-4">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="title w-75 removeW75 m-auto">
+              FEEDBACK SOBRE O PROJETO: PARQUE DAS GRAÇAS
+            </h1>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              Durante a realização do projeto, acompanhamos de perto a obra por
+              meio de imagens diárias. Observamos a degradação do manguezal dia
+              após dia, o que evidenciou que um local de grande riqueza
+              ambiental foi devastado para um projeto que se diz voltado para a
+              natureza. No entanto, não se observa o mais importante: a
+              destruição e a falta de reparação. Estudos demonstram que a
+              reparação do manguezal é quase inviável devido aos altos custos e
+              à dificuldade do replantio das árvores. Consultas literárias
+              confirmam que o replantio de outras espécies de árvores no mangue
+              não teria efeitos benéficos para a sua reconstituição e poderia
+              causar problemas futuros.
+            </p>
+            <p class="text w-75 m-auto mt-2 removeW75">
+              Além da destruição do mangue, constatamos que todo o leito do rio,
+              a fauna e o solo também estão sendo degradados ao longo da obra.
+              Assim, essa obra não apenas desperdiça o dinheiro da população,
+              mas também atende aos interesses de poucos, em detrimento da
+              natureza, que é o que mais importa.
+            </p>
+            <p class="text w-75 m-auto mt-2 removeW75">
+              Por fim, deixamos fotos de nossas observações e constatações
+              diárias:
+            </p>
+          </div>
+          <div class="container">
+            <div id="carouselFeedback" class="carousel carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="/img/Critica/image01.jpg"
+                    class="d-block w-75 m-auto mt-4 rounded-5 removeW75 addW100"
+                    alt="image01.png"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/img/Critica/image02.jpg"
+                    class="d-block w-75 m-auto mt-4 rounded-5 removeW75 addW100"
+                    alt="image02.jpg"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/img/Critica/image03.jpg"
+                    class="d-block w-75 m-auto mt-4 rounded-5 removeW75 addW100"
+                    alt="image03.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container d-flex justify-content-center">
+              <button
+                class="ui-btn m-auto rounded-5 mt-2"
+                type="button"
+                data-bs-target="#carouselFeedback"
+                data-bs-slide="prev"
+              >
+                <span> VOLTAR </span>
+              </button>
+              <button
+                class="ui-btn m-auto rounded-5 mt-2"
+                type="button"
+                data-bs-target="#carouselFeedback"
+                data-bs-slide="prev"
+              >
+                <span> PASSAR </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container mt-4">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="title w-75 removeW75 m-auto">
+              ELECANDO PROBLEMAS: PROJETO PARQUE DAS GRAÇAS
+            </h1>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              Observamos e ponderamos sobre os problemas que essa obra gera, e
+              os elencamos, com base em estudos literários e de campo, da
+              seguinte forma:
+            </p>
+            <p class="text w-75 m-auto mt-3 ps-4 removeW75">
+              • Destruição da fauna, flora, solo e rios;
+            </p>
+            <p class="text w-75 m-auto mt-3 ps-4 removeW75">
+              • Poluição sonora;
+            </p>
+            <p class="text w-75 m-auto mt-3 ps-4 removeW75">
+              • Perda da qualidade do ar, devido ao desmatamento;
+            </p>
+            <p class="text w-75 m-auto mt-3 ps-4 removeW75">
+              • Poluição do meio ambiente;
+            </p>
+            <p class="text w-75 m-auto mt-3 ps-4 removeW75">
+              • Dejetos e resíduos da obra sendo descartados no rio;
+            </p>
+            <p class="text w-75 m-auto mt-3 ps-4 removeW75">
+              • A flora do mangue não é possível ser reposta facilmente, e o
+              custo para isso seria exorbitante, conforme estudos observados;
+            </p>
+            <p class="text w-75 m-auto mt-3 ps-4 removeW75">
+              • Destruição do habitat natural de diversas espécies;
+            </p>
+            <p class="text w-75 m-auto mt-3 ps-4 removeW75">
+              • Efeitos climáticos adversos;
+            </p>
+            <p class="text w-75 m-auto mt-3 ps-4 removeW75">
+              • Enchentes e alagamentos em nossa cidade, já que os mangues
+              controlam nossas marés;
+            </p>
+            <p class="text w-75 m-auto mt-3 ps-4 removeW75">
+              • Destruição de berços de reprodução e alimentação de espécies;
+            </p>
+            <p class="text w-75 m-auto mt-3 ps-4 removeW75">
+              • Assoreamento de diversos trechos do rio.
+            </p>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              Portanto, resta buscarmos soluções e métodos de educar nossa
+              população sobre esse tema.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="container mt-4">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="title w-75 removeW75 m-auto">
+              RECIFE: UMA CIDADE CONSTRUÍDA SOBRE O MANGUE
+            </h1>
+            <p class="text w-75 m-auto mt-3  removeW75">
+              Como já mencionado, a vegetação do mangue é de extrema importância
+              para a nossa sociedade, pois não apenas desempenha o papel de
+              prevenção de fenômenos naturais, como enchentes e alagamentos que
+              sofremos anualmente, como também evita o assoreamento do nosso
+              leito de rio. Além disso, desempenha um papel fundamental na
+              absorção de gás carbônico do ar, fazendo assim um papel maior do
+              que se imagina.
+            </p>
+            <p class="text w-75 m-auto mt-3  removeW75">
+              Sabendo que esse descaso nos afetará mais cedo ou mais tarde, e
+              como o ser humano apenas se importa quando já não há mais volta ou
+              quando vem a afetá-lo, somente veremos os impactos dessa obra e
+              das outras que fazem parte do projeto Parque do Capibaribe quando
+              já estiverem assolando a população recifense, com enchentes,
+              alagamentos, ondas de calor e aumento da temperatura da cidade.
+            </p>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              Isso porque, além do notório título que recai sobre a cidade, que
+              é chamada de Veneza brasileira, é fato que a cidade do Recife foi
+              construída sobre manguezais. Fato esse que chega a quase 68% de
+              terras construídas em área de mangue. De maneira que as marés e as
+              chuvas afetam diretamente a nossa cidade.
+            </p>
+            <p class="text w-75 m-auto mt-3 removeW75">
+              Quando o Recife foi construído, não foi feito um planejamento
+              urbano adequado. Dessa forma, aterramos, poluímos, desmatamos
+              mangues e braços do rio Capibaribe e outros rios que banham o
+              Recife. Atualmente, sofremos com enchentes, alagamentos, no
+              inverno e no verão com ondas de calor, aumento da temperatura da
+              cidade e até mesmo locais sem água. Esses problemas são
+              ocasionados pelo descaso do poder público, a falta de educação
+              ambiental e a falta da proteção do meio ambiente.
+            </p>
+          </div>
+          <div class="container">
+            <div id="carouselRecifeMangue" class="carousel carousel-fade">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="/img/VenezaBR/image01.jpg"
+                    class="d-block w-75 m-auto mt-4 rounded-5 removeW75 addW100"
+                    alt="image01.png"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/img/VenezaBR/image02.jpg"
+                    class="d-block w-75 m-auto mt-4 rounded-5 removeW75 addW100"
+                    alt="image02.jpg"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/img/VenezaBR/image03.jpg"
+                    class="d-block w-75 m-auto mt-4 rounded-5 removeW75 addW100"
+                    alt="image03.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container d-flex justify-content-center">
+              <button
+                class="ui-btn m-auto rounded-5 mt-2"
+                type="button"
+                data-bs-target="#carouselRecifeMangue"
+                data-bs-slide="prev"
+              >
+                <span> VOLTAR </span>
+              </button>
+              <button
+                class="ui-btn m-auto rounded-5 mt-2"
+                type="button"
+                data-bs-target="#carouselRecifeMangue"
+                data-bs-slide="prev"
+              >
+                <span> PASSAR </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="Pagination justify-content-center d-flex pt-5">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="/index.html">Anterior</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="/index.html">1</a>
+            </li>
+            <li class="page-item active" aria-current="page">
+              <span class="page-link" id="btnPG1">2</span>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="index3.html">3</a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="index3.html">Próximo</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+    <footer class="text-center text-lg-start">
+      <section
+        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+      >
+        <div class="me-5 d-none d-lg-block">
+          <span>Nos sigam em nossas redes:</span>
+        </div>
+        <div>
+          <a
+            href="https://www.facebook.com/raizesdomangue"
+            class="me-4 text-reset"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-f facebook"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/@raizesdomangue5473"
+            class="me-4 text-reset"
+            target="_blank"
+          >
+            <i class="fab fa-youtube youtube"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/raizes_mangue/"
+            class="me-4 text-reset"
+            target="_blank"
+          >
+            <i class="fab fa-instagram instagram"></i>
+          </a>
+          <a
+            href="https://github.com/Thailson13/ProjetoRaizesDoMangue"
+            class="me-4 text-reset"
+            target="_blank"
+          >
+            <i class="fab fa-github gitHub"></i>
+          </a>
+        </div>
+      </section>
+      <section>
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4 title">
+                <img
+                  src="/img/mangrove.png"
+                  alt=""
+                  class="logoRDM me-3"
+                />Raízes do Mangue
+              </h6>
+              <p class="text text-footer">
+                A destruição implacável dos manguezais impede o ser humano de
+                alcançar saúde e paz. Esses ecossistemas vitais são
+                frequentemente degradados e devastados, comprometendo a
+                biodiversidade e nossa própria subsistência. Ao negligenciar a
+                importância dos manguezais, estamos prejudicando a nós mesmos.
+                Precisamos protegê-los e promover práticas sustentáveis para
+                colher alegria e amor no futuro.
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4 title">SOBRE O PROJETO</h6>
+              <p class="text text-footer text-center">
+                <a href="#!" class="text-reset" target="_blank"
+                  >Quem somos nós</a
+                >
+              </p>
+              <p class="text text-footer text-center">
+                <a href="#!" class="text-reset" target="_blank"
+                  >Materiais Utilizado</a
+                >
+              </p>
+              <p class="text text-footer text-center">
+                <a href="#!" class="text-reset" target="_blank">Entrevistas</a>
+              </p>
+              <p class="text text-footer text-center">
+                <a href="#!" class="text-reset" target="_blank"
+                  >Referências bibliográfica</a
+                >
+              </p>
+              <p class="text text-footer text-center">
+                <a href="#!" class="text-reset" target="_blank"
+                  >Funções dos desenvolvedores</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="text-center p-4 Copyright">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >Raízes do Mangue LTDA</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
