@@ -29,3 +29,4 @@ export function loadTheme() {
     checkboxThemeLoad.checked = false;
   }
 }
+

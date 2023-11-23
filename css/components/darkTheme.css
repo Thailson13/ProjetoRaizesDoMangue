@@ -5,16 +5,14 @@
 [data-tema="dark-mode"] .btn-x,
 [data-tema="dark-mode"] .btnColor,
 [data-tema="dark-mode"] .iconMenu {
-  color: #E6EDF3 !important;
+  color: #e6edf3 !important;
 }
-
-
 
 [data-tema="dark-mode"] .navbar,
 [data-tema="dark-mode"] .offcanvas-header,
 [data-tema="dark-mode"] #btnSearch,
-[data-tema="dark-mode"] footer
- {
+[data-tema="dark-mode"] footer,
+[data-tema="dark-mode"] .page-link:hover {
   background-color: #010409 !important;
 }
 
@@ -30,25 +28,28 @@
   --color: #010409;
 }
 
-
-[data-tema="dark-mode"] main {
-  background: #0D1117;
+[data-tema="dark-mode"] main,
+[data-tema="dark-mode"] .pagination {
+  background: #0d1117;
 }
 
 [data-tema="dark-mode"] .Copyright {
   background-color: #010305;
 }
 
-[data-tema="dark-mode"] .title
-{
-  color: #E6EDF3 ;
+[data-tema="dark-mode"] .title {
+  color: #e6edf3;
 }
 
 [data-tema="dark-mode"] .text {
-  color: white ;
+  color: white !important;
 }
 
-[data-tema="dark-mode"] .ui-btn{
-  --btn-default-bg:  #333333;
+[data-tema="dark-mode"] .ui-btn {
+  --btn-default-bg: #333333;
   --btn-hover-bg: rgb(41, 41, 41);
+}
+
+.sm2-playlist-bd li div a {
+  color: black !important;
 }
