@@ -102,6 +102,11 @@
   border-radius: 8px !important;
 }
 
+.aReset{
+  text-decoration: none;
+  color: white !important;
+}
+
 .offcanvas-header,
 .navbar {
   background-color: #3b5998;
