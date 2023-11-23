@@ -106,7 +106,9 @@
   text-decoration: none;
   color: white !important;
 }
-
+h1 a {
+  color: white !important;
+}
 .offcanvas-header,
 .navbar {
   background-color: #3b5998;
@@ -128,10 +130,6 @@ main {
 .persona {
   text-align: center;
   margin-bottom: 10px;
-}
-
-.card-color{
-
 }
 
 .devLogo{
