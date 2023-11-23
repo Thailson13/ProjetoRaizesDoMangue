@@ -12,6 +12,9 @@ EN - This project constitutes an extension of the work that I have been developi
 2. CSS
 3. JavaScript
 4. Git e GitHub
+5. Bootstrap
+6. MDBootstrap
+
 
 # Meus Contatos - My contacts
 
