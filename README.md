@@ -15,6 +15,12 @@ EN - This project constitutes an extension of the work that I have been developi
 5. Bootstrap
 6. MDBootstrap
 
+# Membros do projeto - Project members
+1. Matheus Vitório - 01085261
+2. Ana Flavia - 01519044
+3. Gabriel Cauã - 01530132
+4. Lyranjor Ferreira - 01106569
+5. Thailson Júlio - 01531488
 
 # Meus Contatos - My contacts
 
