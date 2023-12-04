@@ -1,0 +1,678 @@
+/* IMPORTES */
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Berkshire+Swash&family=Roboto+Slab:wght@300&family=Roboto:wght@300&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+li {
+    list-style: none;
+
+}
+
+/* Builds */
+._100px {
+    width: 150px;
+
+
+}
+
+._50px {
+    width: 50px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background: #191B1D;
+
+
+}
+
+.emphasis {
+    color: greenyellow;
+}
+
+.link {
+    font-family: 'Zilla Slab', sans-serif;
+    font-size: 12pt;
+    color: greenyellow;
+}
+
+.imageSize {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    border-radius: 8px;
+}
+
+.imageSize2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+/* Heading Page */
+#heading {
+    background-color: #151719;
+    background-image: url(img/animais-vivem-na-floresta-de-mangue-na-cena-do-por-do-sol_1308-56822.jpg);
+    background-position: bottom;
+    background-size: cover;
+
+}
+
+#heading #elements {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+#heading #elements #titleLocation {
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+#heading #elements #title {
+    text-shadow: 3px 3px 5px white, -3px -3px 5px white;
+    color: #228b22;
+    font-family: 'Berkshire Swash', sans-serif;
+    font-size: 40pt;
+    cursor: pointer;
+    text-shadow:
+        -1px -1px 0px aliceblue,
+        -1px 1px 0px aliceblue,
+        1px -1px 0px aliceblue,
+        1px 0px 0px aliceblue;
+}
+
+#heading #elements #subTitle {
+    color: #582D77;
+    font-size: 30pt;
+    font-family: 'Aref Ruqaa Ink', serif;
+    cursor: pointer;
+    text-align: center;
+    text-shadow:
+        -1px -1px 0px aliceblue,
+        -1px 1px 0px aliceblue,
+        1px -1px 0px aliceblue,
+        1px 0px 0px aliceblue;
+}
+
+#heading #elements #avatar {
+    width: 150px;
+    margin: 4px;
+    margin-right: 0;
+    cursor: pointer;
+
+}
+
+/* Browser Page */
+#heading nav {
+    border-style: solid;
+    border-top-width: 2px;
+    border-bottom-width: 4px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-color: #2F3133;
+    background: #151719;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+#heading nav .navButton {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 2px;
+    background-color: #2F3133;
+    color: aliceblue;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10pt;
+    border-style: solid;
+    border-color: #2F3133;
+    border-width: 2px;
+
+}
+
+#heading nav .navButton:hover {
+    border-color: forestgreen;
+
+}
+
+#heading nav a {
+    text-decoration: none;
+
+}
+
+/* Main Page */
+.textCard {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 3vh;
+    background-color: #2F3133;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 3px 3px 20px 5px, -3px -3px 20px 5px;
+
+}
+
+.textCard .textDivision {
+    border-radius: 8px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+
+}
+
+.textCard .textDivision .titleCard {
+    color: forestgreen;
+    margin: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24pt;
+    text-align: center;
+    text-shadow: 1px 1px 5px black;
+
+}
+
+.textCard .textDivision .text01 {
+    color: white;
+    margin: 14px;
+    margin-bottom: 10px;
+    font-size: 14pt;
+    font-family: 'Roboto Slab', serif;
+    text-align: justify;
+    text-shadow: 1px 1px 3px black;
+
+}
+
+.textCard .textDivision img {
+    display: flex;
+    justify-content: center;
+}
+
+#inputDiv {
+    background-color: #0C0C0C;
+    position: fixed;
+    left: 30px;
+    width: 400px;
+    border-radius: 6px;
+    padding: 10px;
+
+}
+
+#inputDiv div {
+
+    display: flex;
+    border-radius: 8px;
+    box-shadow: none;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+#inputDiv form {
+    display: grid;
+    text-align: center;
+    color: aliceblue;
+
+}
+
+#inputDiv form input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: none;
+
+}
+
+#inputDivEmail {
+    background-color: #0C0C0C;
+    position: fixed;
+    top: 495px;
+    width: 400px;
+    left: 30px;
+    border-radius: 6px;
+    text-align: center;
+    padding: 10px;
+
+}
+
+#inputDivEmail form {
+    display: grid;
+    margin-top: 10px;
+    text-align: center;
+    color: aliceblue;
+
+}
+
+#inputDivEmail form input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: none;
+
+}
+
+#inputDivEmail div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.inputBorder {
+    border: none;
+
+}
+
+
+
+#submitCursor {
+    border-style: solid;
+    border-color: #2F3133;
+    border-width: 1px;
+    cursor: pointer;
+    background: #2F3133;
+    color: aliceblue;
+
+}
+
+#submitCursor:hover {
+    border-color: #228b22;
+    color: #228b22;
+
+}
+
+#inputDiv h1 {
+    text-align: center;
+    color: #228b22;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+#inputDivEmail h1 {
+    text-align: center;
+    color: #228b22;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+
+#inputDivEmail div {
+    display: flex;
+    justify-content: center;
+
+}
+
+#inputDivEmail div h1 {
+    margin-top: 18px;
+
+}
+
+#inputDiv div h1 {
+    margin-top: 12px;
+
+}
+
+#socialBox1 {
+    position: fixed;
+    left: 30px;
+    top: 712px;
+    text-align: center;
+    background-color: #0C0C0C;
+    width: 400px;
+    border-radius: 8px;
+    color: #228b22;
+    padding: 10px;
+
+}
+
+#socialBox1:hover {
+    border-color: #228b22;
+
+}
+
+#socialBox1 #socialAdjust1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+#socialBox1 img {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #191B1D;
+    border-radius: 100%;
+
+}
+
+#socialBox1 img:hover {
+    border-color: #228b22;
+
+}
+
+#socialBox1 h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 10px;
+
+}
+
+/* Footer Page */
+#footerBox {
+    border-style: solid;
+    border-color: #2F3133;
+    border-top-width: 1px;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    background: #151719;
+    color: aliceblue;
+    margin-top: 24px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+
+#infoBox {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#socialBox #socialTitle {
+    font-size: 14pt;
+    margin-top: 10px;
+    color: forestgreen;
+    text-align: center;
+
+}
+
+#socialAdjust {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#socialBox img {
+    border-style: solid;
+    border-color: #2F3133;
+    border-width: 2px;
+    border-radius: 100%;
+    margin: 5px;
+
+}
+
+#socialBox img:hover {
+    border-color: forestgreen;
+
+}
+
+#companyBox {
+    margin-top: 10px;
+    text-align: center;
+    background: #2F3133;
+
+}
+
+/* Animation Page */
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+#heading nav .navButton {
+    animation: fromLeft 0.6s .1s backwards;
+}
+
+#heading nav .navButton:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+#heading nav .navButton:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+#heading nav .navButton:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+#heading nav .navButton:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+#heading nav .navButton:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+#heading nav .navButton:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+#heading nav .navButton:nth-child(8) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(-32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+#heading #elements #avatar {
+    animation: fromBottom .6s;
+}
+
+#heading #elements #title {
+    animation: fromBottom .6s;
+}
+
+#heading #elements #subTitle {
+    animation: fromBottom .6s;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.textCard1 {
+    animation: fromTop.6s;
+    animation-delay: 0.2s;
+
+}
+
+.textCard {
+    animation: fromTop.6s;
+    animation-delay: 0.2s;
+
+}
+
+
+#radio {
+    animation: fromLeft 0.6s;
+    animation-delay: 0.2s;
+}
+
+#video {
+    animation: fromLeft 0.6s;
+    animation-delay: 0.2s;
+}
+
+#inputDiv {
+    animation: fromLeft 0.6s;
+    animation-delay: 0.2s;
+}
+
+#inputDivEmail {
+    animation: fromLeft 0.6s;
+    animation-delay: 0.2s;
+}
+
+#socialBox1 {
+    animation: fromLeft 0.6s;
+    animation-delay: 0.2s;
+}
+
+/* Buttons */
+#returnTop {
+    position: fixed;
+    bottom: 5px;
+    right: 30px;
+    cursor: pointer;
+    animation: fromTop .6s;
+}
+
+#radio {
+    background-color: #0C0C0C;
+    position: fixed;
+    right: 30px;
+    border-radius: 8px;
+    padding: 10px;
+
+
+}
+
+#radio iframe {
+    width: 400px;
+    border-radius: 8px;
+
+}
+
+#video {
+    position: fixed;
+    right: 30px;
+    top: 480px;
+    background: #0C0C0C;
+    border-radius: 8px;
+    color: aliceblue;
+    padding: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#video h2 {
+    font-size: 12.95px;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+#video iframe {
+    width: 400px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+
+#infoBox #whoAreWe {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#infoBox #whoAreWe a {
+    text-decoration: none;
+    color: #228b22;
+    font-size: 20pt;
+    display: flex;
+    margin-left: auto;
+
+
+}
+
+.textCard2 {
+    width: 1000px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 3vh;
+    background-color: #2F3133;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 3px 3px 20px 5px, -3px -3px 20px 5px;
+
+}
+
+.textCard2 .textDivision {
+    border-radius: 8px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+
+
+}
+
+.textCard2 .textDivision .titleCard {
+    color: forestgreen;
+    margin: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24pt;
+    text-align: center;
+    text-shadow: 1px 1px 5px black;
+
+}
+
+.textCard2 .textDivision .text01 {
+    color: white;
+    margin: 14px;
+    margin-bottom: 10px;
+    font-size: 14pt;
+    font-family: 'Roboto Slab', serif;
+    text-align: justify;
+    text-shadow: 1px 1px 3px black;
+    
+}
