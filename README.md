@@ -21,6 +21,10 @@ EN - This project constitutes an extension of the work that I have been developi
 3. Gabriel Cauã - 01530132
 4. Lyranjor Ferreira - 01106569
 5. Thailson Júlio - 01531488
+6. Cleonildo David - 01532464
+7. André Gabriel - 01201658
+8. Silvio Gabriel - 01561138
+
 
 # Meus Contatos - My contacts
 
