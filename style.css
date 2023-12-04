@@ -1,0 +1,587 @@
+/* IMPORTES */
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Berkshire+Swash&family=Roboto+Slab:wght@300&family=Roboto:wght@300&display=swap');
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+li {
+    list-style: none;
+
+}
+
+
+/* Builds */
+._100px {
+    width: 150px;
+
+
+}
+
+
+._50px {
+    width: 50px;
+
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    background: #191B1D;
+
+}
+
+.emphasis {
+    color: greenyellow;
+}
+
+.link {
+    font-family: 'Zilla Slab', sans-serif;
+    font-size: 12pt;
+    color: greenyellow;
+}
+
+.imageSize {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    border-radius: 8px;
+}
+
+.imageSize2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+
+/* Heading Page */
+#heading{
+    background-color:#151719 ;
+    background-image: url(animais-vivem-na-floresta-de-mangue-na-cena-do-por-do-sol_1308-56822.jpg);
+    background-position: bottom;
+    background-size: cover;
+}
+
+#heading #elements {
+    display: flex;
+    justify-content: space-between;
+ 
+
+}
+
+#heading #elements #titleLocation{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+#heading #elements #title {
+    text-shadow: 2px 2px 1px black;
+    color: #228b22;
+    font-family: 'Berkshire Swash', sans-serif;
+    font-size: 40pt;
+    cursor: pointer;
+}
+
+#heading #elements #subTitle {
+    text-shadow: 2px 2px 1px black;
+    color: white;
+    font-size: 24pt;
+    font-family: 'Aref Ruqaa Ink', serif;
+    cursor: pointer;
+    text-align: center;
+}
+
+#heading #elements #avatar {
+    width: 150px;
+    margin: 4px;
+    margin-right: 0;
+    cursor: pointer;
+
+}
+
+
+/* Browser Page */
+#heading nav {
+    border-style: solid;
+    border-top-width: 2px;
+    border-bottom-width: 4px;
+    border-color: #2F3133;
+    background: #151719;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+ 
+}
+
+#heading nav .navButton {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 2px;
+    background-color: #2F3133;
+    color: aliceblue;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10pt;
+    border-style: solid;
+    border-color: #2F3133;
+    border-width: 2px;
+
+}
+
+#heading nav .navButton:hover {
+    border-color: forestgreen;
+   
+
+}
+
+#heading nav a {
+    text-decoration: none;
+
+}
+
+
+/* Main Page */
+.textCard {
+    margin-top: 3vh;
+    background-color: #1C1E20;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+
+}
+
+.textCard .textDivision {
+    box-shadow:  1px 1px 5px 1px, -1px -1px 5px 1px;
+    border-radius: 8px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+  
+
+}
+
+.textCard .textDivision .titleCard {
+    color: forestgreen;
+    margin: 10px;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    font-size: 24pt;
+    text-align: center;
+
+}
+
+.textCard .textDivision .text01 {
+    color: white;
+    margin: 14px;
+    margin-bottom: 10px;
+    font-size: 12pt;
+    font-family: 'Roboto Slab', serif;
+    text-align: justify;
+
+}
+
+.textCard .textDivision img {
+    display: flex;
+    justify-content: center;
+}
+
+#inputDiv {
+    background-color: #1C1E20;
+    box-shadow: 1px 1px 5px 1px , -1px -1px 5px 1px;
+    position: fixed;
+    left: 30px;
+    width: 340px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+ 
+}
+
+#inputDiv div{
+    display: flex;
+    border-radius: 8px;
+    box-shadow: none;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+#inputDiv form {
+    display: grid;
+    text-align: center;
+    color: aliceblue;
+
+}
+
+#inputDiv form input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: none;
+
+}
+
+#inputDivEmail {
+    background-color: #1C1E20;
+    box-shadow: 1px 1px 5px 1px , -1px -1px 5px 1px;
+    position: fixed;
+    top: 500px;
+    width: 340px;
+    left: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    text-align: center;
+ 
+
+}
+
+#inputDivEmail form {
+    display: grid;
+    margin-top: 10px;
+    text-align: center;
+    color: aliceblue;
+
+}
+
+#inputDivEmail form input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: none;
+    
+
+}
+
+#inputDivEmail div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.inputBorder{
+    border: none;
+}
+
+
+
+#submitCursor {
+    border-style: solid;
+    border-color:#2F3133 ;
+    border-width: 1px;
+    cursor: pointer;
+    background:#2F3133;
+    color: aliceblue;
+
+}
+
+#submitCursor:hover {
+    border-color:#228b22;  
+    color: #228b22;
+
+}
+
+
+
+#inputDiv h1 {
+    text-align: center;
+    color: #228b22;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+
+}
+
+#inputDivEmail h1 {
+    text-align: center;
+    color: #228b22;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+
+}
+
+
+#inputDivEmail div{
+    display: flex;
+    justify-content: center;
+}
+
+#inputDivEmail div h1{
+   margin-top: 18px;
+}
+
+
+#inputDiv div h1{
+    margin-top: 12px;
+}
+
+#socialBox1{
+    position: fixed;
+    left: 30px;
+    top: 720px;
+    text-align: center;
+    background-color: #1C1E20;
+    width: 340px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px 1px black , -1px -1px 5px 1px black;
+    color: #228b22;
+   
+   }
+   
+   #socialBox1:hover{
+       border-color: #228b22;
+   }
+   
+   #socialBox1 #socialAdjust1 {
+       display: flex;
+       justify-content: space-around;
+       margin-top: 10px;
+       margin-bottom: 10px;
+     
+   }
+   
+   #socialBox1 img{
+       border-style: solid;
+       border-width: 2px;
+       border-color: #191B1D;
+       border-radius: 100%;
+       
+   }
+   
+   
+   #socialBox1 img:hover{
+       border-color:#228b22;
+       
+   }
+   
+   #socialBox1 h1{
+       margin: 10px;
+   }
+
+/* Footer Page */
+#footerBox {
+    border-style: solid;
+    border-color: #2F3133;
+    border-top-width: 1px;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    background: #151719;
+    color: aliceblue;
+    margin-top: 24px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#infoBox {
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+#socialBox #socialTitle {
+    font-size: 14pt;
+    margin-top: 10px;
+    color: forestgreen;
+    text-align: center;
+
+}
+
+
+
+#socialAdjust{
+    display: flex;
+    justify-content: space-between;
+}
+
+#socialBox img {
+    border-style: solid;
+    border-color: #2F3133;
+    border-width: 2px;
+    border-radius: 100%;
+
+}
+
+#socialBox img:hover {
+    border-color: forestgreen;
+
+}
+
+#companyBox {
+    margin-top: 10px;
+    text-align: center;
+    background: #2F3133;
+
+}
+
+
+/* Animation Page */
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+#heading nav .navButton {
+    animation: fromLeft 0.6s .1s backwards;
+}
+
+#heading nav .navButton:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+#heading nav .navButton:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+#heading nav .navButton:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+#heading nav .navButton:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+#heading nav .navButton:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+#heading nav .navButton:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+#heading nav .navButton:nth-child(8) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(-32px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+#heading #elements #avatar {
+    animation: fromBottom .6s;
+}
+
+#heading #elements #title {
+    animation: fromBottom .6s;
+}
+
+#heading #elements #subTitle {
+    animation: fromBottom .6s;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.textCard1 .textDivision {
+    animation: fromTop.6s;
+    animation-delay: 0.2s;
+
+}
+
+.textCard .textDivision {
+    animation: fromTop.6s;
+    animation-delay: 0.2s;
+
+}
+
+#inputDiv {
+    animation: fromLeft 0.6s;
+    animation-delay: 0.2s;
+}
+
+#inputDivEmail {
+    animation: fromLeft 0.6s;
+    animation-delay: 0.2s;
+}
+
+
+/* Buttons */
+#returnTop {
+    position: fixed;
+    bottom: 5px;
+    right: 30px;
+    cursor: pointer;
+    animation: fromTop .6s;
+}
+
+
+@media (max-width: 1360px){
+    #inputDiv{
+        display: none;
+    }
+    #inputDivEmail{
+        display: none;
+    }
+
+    header nav a{
+        display: none;
+    }
+
+    section audio{
+        display: none;
+
+    }
+
+    socialBox1{
+        display: none;
+    }
+    
+    #radio{
+        display: none;
+    }
+}
+
+#radio{
+ position: fixed;
+ right: 30px;
+ box-shadow: 2px 2px 5px black, 2px 2px 5px black;
+ border-radius: 8px;
+
+}
