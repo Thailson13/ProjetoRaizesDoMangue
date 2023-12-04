@@ -1,0 +1,301 @@
+/* IMPORTES */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;900&family=Oswald&family=Roboto:wght@300&family=Zilla+Slab&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+
+}
+
+/* Builds */
+._100px {
+    width: 100px;
+    margin: 8px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background: #191B1D;
+    
+}
+
+
+.emphasis {
+    color: greenyellow;
+}
+
+.link {
+    font-family: 'Zilla Slab', sans-serif;
+    font-size: 12pt;
+    color:greenyellow;
+}
+
+.imageSize {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    border-radius: 8px;
+}
+
+.imageSize2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 350px;
+    border-radius: 8px;
+}
+
+
+
+/* Heading Page */
+#heading #elements {
+    display: flex;
+    justify-content: space-between;
+    background: #151719;
+}
+
+#heading #elements #title {
+    color: #228b22;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 43pt;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    cursor: pointer;
+   
+}
+
+#heading #elements #subTitle {
+   color: white;
+   text-align: center;
+   font-size: 10pt;
+   font-family: 'Inter', sans-serif;
+   cursor: pointer;
+}
+
+
+#heading #elements #avatar {
+    margin: 4px;
+    margin-right: 0;
+    cursor: pointer;
+    
+}
+
+/* Browser Page */
+#heading nav {
+    border-style: solid;
+    border-top-width: 2px;
+    border-bottom-width: 4px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-color: #2F3133;
+    background: #151719;
+    padding: 8px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+#heading nav .navButton { 
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+    background-color: #2F3133;
+    color: aliceblue;
+    border-radius: 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10pt;
+    border-style: solid;
+    border-color: #2F3133;
+    border-width: 2px;
+
+}
+
+#heading nav .navButton:hover {
+    font-family: 'Inter', sans-serif;
+    border-style: solid;
+    border-color: forestgreen;
+    border-width: 2px;
+    box-sizing: border-box;
+}
+
+#heading nav a {
+    text-decoration: none;
+    
+}
+
+/* Main Page */
+.textCard {
+    margin-top: 3vh;
+    border-style: solid;
+    border-color:#2F3133;
+    border-width: 1px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    
+    
+}
+
+.textCard .textDivision {
+    margin: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  
+
+}
+
+.textCard .textDivision .titleCard {
+    color: forestgreen;
+    margin: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32pt;
+    text-align: center;
+    
+}
+
+.textCard .textDivision .text01 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 16pt;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    
+}
+
+.textCard .textDivision img{
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Footer */
+
+
+footer div a {
+    color: white;
+}
+
+
+
+/* ANIMATION*/
+@keyframes fromLeft {
+    from{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+#heading nav .navButton{
+    animation: fromLeft 0.6s .1s backwards;
+}
+
+#heading nav .navButton:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+#heading nav .navButton:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+#heading nav .navButton:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+#heading nav .navButton:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+#heading nav .navButton:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+#heading nav .navButton:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+#heading nav .navButton:nth-child(8) {
+    animation-delay: 0.6s;
+}
+
+
+@keyframes fromBottom {
+    from{
+        opacity: 0;
+        transform: translateY(-32px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+#heading #elements #avatar{
+    animation: fromBottom .6s;
+}
+
+#heading #elements #title{
+    animation: fromBottom .6s;
+}
+
+#heading #elements #subTitle{
+    animation: fromBottom .6s;
+}
+
+@keyframes fromTop {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.textCard .textDivision{
+    animation: fromTop.6s;
+    animation-delay: 0.2s;
+
+}
+
+/* BUTTON TOP RETURN */
+#returnTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    cursor: pointer;
+}

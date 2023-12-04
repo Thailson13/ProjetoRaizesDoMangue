@@ -1,0 +1,30 @@
+font-family: 'Bebas Neue', cursive;
+font-family: 'Zilla Slab', serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Zilla Slab', serif;
+
+        <section id="by">
+            <h1>Por:</h1>
+            <p>· x pessoa</p>
+            <p>· x pessoa</p>
+            <p>· x pessoa</p>
+            <p>· x pessoa</p>
+            <p>· x pessoa</p>
+            <p>· x pessoa</p>
+            <p>· x pessoa</p>
+            <p>· x pessoa</p>
+            <p>· x pessoa</p>
+            <p>· x pessoa</p>
+            <p>· x pessoa</p>
+        </section>
+
+
+
+                    <div id="test">
+                <form action="">
+                    <input type="text" id="name" placeholder="Digite o nome">
+                    <input type="number" id="salary" placeholder="Digite o salário">
+                    <input type="submit" id="send" value="ENVIAR">
+                </form>
+            </div>
